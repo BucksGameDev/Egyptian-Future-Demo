@@ -4,9 +4,9 @@
   > "My fellow Americans..." - Barack Obama
 
 *Some demo art assets*\
-![enemy](Villain.png)
-![tile](Sprite-0004.png)
-![swans](SwanSpriteSheet1.png)
+![enemy](/Sprites/Villain.png)
+![hover dude](/Sprites/HoverDude.png)
+![swans](/Sprites/SwanSpriteSheet1.png)
 
 
 ## Getting Started
