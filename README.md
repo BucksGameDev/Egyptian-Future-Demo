@@ -23,5 +23,6 @@ Based on your role in project; Artist or Developer, following the correspoding s
 2. do some stuff
 ### Artists
 1. download some picutres
+
 2. and do some stuff
-<img width="1024" height="414" alt="image" src="https://github.com/user-attachments/assets/033dcdaa-7723-4ab7-ad76-fbe28f427d2f" />
+<img width="512" height="212" alt="Godot_logo" src="https://github.com/user-attachments/assets/6d97182c-558e-4b6d-8b53-a8202f4a375e" />
