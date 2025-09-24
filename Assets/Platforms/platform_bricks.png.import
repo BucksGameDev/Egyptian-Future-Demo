@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4dvreitdwif1"
-path="res://.godot/imported/Villain.png-a3d4fd02a62e72851538cc251e475dcb.ctex"
+uid="uid://31e4o0ttshew"
+path="res://.godot/imported/platform_bricks.png-c1a0baa31cccb65002f286f5db0f8e98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Villain.png"
-dest_files=["res://.godot/imported/Villain.png-a3d4fd02a62e72851538cc251e475dcb.ctex"]
+source_file="res://Assets/Platforms/platform_bricks.png"
+dest_files=["res://.godot/imported/platform_bricks.png-c1a0baa31cccb65002f286f5db0f8e98.ctex"]
 
 [params]
 

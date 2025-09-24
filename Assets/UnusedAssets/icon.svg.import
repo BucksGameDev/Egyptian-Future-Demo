@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf7dmhnuv83xx"
-path="res://.godot/imported/beachTiles.png-319418dede53d7104b3bcb04ab8b8ce5.ctex"
+uid="uid://bfabr3y68v0p"
+path="res://.godot/imported/icon.svg-24282e084a1aea8756f1c3a7e3f94cdb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TileMap/beachTiles.png"
-dest_files=["res://.godot/imported/beachTiles.png-319418dede53d7104b3bcb04ab8b8ce5.ctex"]
+source_file="res://Assets/UnusedAssets/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-24282e084a1aea8756f1c3a7e3f94cdb.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

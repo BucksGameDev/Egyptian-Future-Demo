@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://behj5mqspcif0"]
+
+[ext_resource type="Texture2D" uid="uid://3425cx0hfgks" path="res://Assets/Sprites/mcIdle.png" id="1_jhksu"]
+[ext_resource type="Texture2D" uid="uid://datj61xevcneh" path="res://Assets/Sprites/mcOld.png" id="1_sxqh5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxr6v"]
+atlas = ExtResource("1_jhksu")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnpca"]
+atlas = ExtResource("1_jhksu")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5rvx"]
+atlas = ExtResource("1_jhksu")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5b3am"]
+atlas = ExtResource("1_jhksu")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxqh5"]
+atlas = ExtResource("1_sxqh5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cn6iv"]
+atlas = ExtResource("1_sxqh5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssco2"]
+atlas = ExtResource("1_sxqh5")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ipk5o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxr6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnpca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5rvx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5b3am")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxqh5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cn6iv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssco2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i41my"]
+radius = 8.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ipk5o")
+animation = &"Idle"
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_i41my")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e34hx68tiqs1"
-path="res://.godot/imported/desert and trees1.png-a1965361df271cd776d3311915bad981.ctex"
+uid="uid://djr85uxtx7xoc"
+path="res://.godot/imported/diamond.png-41e2cae23feae08a2d69f472544ba938.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TileMap/desert and trees1.png"
-dest_files=["res://.godot/imported/desert and trees1.png-a1965361df271cd776d3311915bad981.ctex"]
+source_file="res://Assets/Pickups/diamond.png"
+dest_files=["res://.godot/imported/diamond.png-41e2cae23feae08a2d69f472544ba938.ctex"]
 
 [params]
 

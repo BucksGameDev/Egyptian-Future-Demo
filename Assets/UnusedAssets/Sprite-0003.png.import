@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7018d834a1q5"
-path="res://.godot/imported/SwanSpriteSheet1.png-252e0ba6d73bd5811b344a32c39ef904.ctex"
+uid="uid://djkpxaiixmiv6"
+path="res://.godot/imported/Sprite-0003.png-a5255864199724c75122488a8e6b1bed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/SwanSpriteSheet1.png"
-dest_files=["res://.godot/imported/SwanSpriteSheet1.png-252e0ba6d73bd5811b344a32c39ef904.ctex"]
+source_file="res://Assets/UnusedAssets/Sprite-0003.png"
+dest_files=["res://.godot/imported/Sprite-0003.png-a5255864199724c75122488a8e6b1bed.ctex"]
 
 [params]
 

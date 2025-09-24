@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djkpxaiixmiv6"
-path="res://.godot/imported/Sprite-0003.png-cfe1157dc066752b8a6229df4d68d07c.ctex"
+uid="uid://bprh2cnv4nau"
+path="res://.godot/imported/earald.png-c6ab7f400183299f48c929b718563295.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TileMap/Sprite-0003.png"
-dest_files=["res://.godot/imported/Sprite-0003.png-cfe1157dc066752b8a6229df4d68d07c.ctex"]
+source_file="res://Assets/Pickups/earald.png"
+dest_files=["res://.godot/imported/earald.png-c6ab7f400183299f48c929b718563295.ctex"]
 
 [params]
 
