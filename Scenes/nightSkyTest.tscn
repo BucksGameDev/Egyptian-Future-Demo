@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://dacq1jkvo2ph6"]
+
+[ext_resource type="Texture2D" uid="uid://cs5vynwub70rd" path="res://Assets/BackgroundTiles/NightSky-0001-sheet.png" id="1_3vcf4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8p2j"]
+atlas = ExtResource("1_3vcf4")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02o6f"]
+atlas = ExtResource("1_3vcf4")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hs2e6"]
+atlas = ExtResource("1_3vcf4")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekmcn"]
+atlas = ExtResource("1_3vcf4")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu6cw"]
+atlas = ExtResource("1_3vcf4")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oowlv"]
+atlas = ExtResource("1_3vcf4")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18q24"]
+atlas = ExtResource("1_3vcf4")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_21djm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8p2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02o6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hs2e6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekmcn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pu6cw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oowlv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18q24")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_21djm")
+autoplay = "default"
+frame = 6
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://31e4o0ttshew"
-path="res://.godot/imported/platform_bricks.png-4ce58f77ebb2ebb7278f11dd4a9ea05a.ctex"
+path="res://.godot/imported/platform_bricks.png-c1a0baa31cccb65002f286f5db0f8e98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://artistAssets/Platforms/platform_bricks.png"
-dest_files=["res://.godot/imported/platform_bricks.png-4ce58f77ebb2ebb7278f11dd4a9ea05a.ctex"]
+source_file="res://Assets/Platforms/platform_bricks.png"
+dest_files=["res://.godot/imported/platform_bricks.png-c1a0baa31cccb65002f286f5db0f8e98.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg1bbjj8ifo2u"
-path="res://.godot/imported/ruby.png-75344a83c8b48124d99fbc5e533d40e6.ctex"
+uid="uid://3425cx0hfgks"
+path="res://.godot/imported/mcIdle.png-49888ef9cb5731c9dc83223ecdf649de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://artistAssets/Pickups/ruby.png"
-dest_files=["res://.godot/imported/ruby.png-75344a83c8b48124d99fbc5e533d40e6.ctex"]
+source_file="res://Assets/Sprites/mcIdle.png"
+dest_files=["res://.godot/imported/mcIdle.png-49888ef9cb5731c9dc83223ecdf649de.ctex"]
 
 [params]
 

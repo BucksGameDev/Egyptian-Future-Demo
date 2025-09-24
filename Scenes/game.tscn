@@ -1,11 +1,12 @@
-[gd_scene load_steps=22 format=3 uid="uid://d2olv0ol4qc0a"]
+[gd_scene load_steps=23 format=3 uid="uid://d2olv0ol4qc0a"]
 
 [ext_resource type="PackedScene" uid="uid://behj5mqspcif0" path="res://Scenes/mcHoverPharaoh.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://b58yeghkb5jai" path="res://Scripts/mcHoverPharaoh.gd" id="2_qxrlw"]
-[ext_resource type="Texture2D" uid="uid://cf7dmhnuv83xx" path="res://artistAssets/TileSets/beachTiles.png" id="3_wrm1d"]
-[ext_resource type="Texture2D" uid="uid://31e4o0ttshew" path="res://artistAssets/Platforms/platform_bricks.png" id="4_3dryh"]
+[ext_resource type="Texture2D" uid="uid://cf7dmhnuv83xx" path="res://Assets/TileSets/beachTiles.png" id="3_wrm1d"]
+[ext_resource type="Texture2D" uid="uid://31e4o0ttshew" path="res://Assets/Platforms/platform_bricks.png" id="4_3dryh"]
 [ext_resource type="PackedScene" uid="uid://dsvhmmuj2ebt" path="res://Scenes/platformTest.tscn" id="5_wowpa"]
 [ext_resource type="PackedScene" uid="uid://c688hvrmmck50" path="res://Scenes/ruby.tscn" id="6_i6g32"]
+[ext_resource type="PackedScene" uid="uid://dacq1jkvo2ph6" path="res://Scenes/nightSkyTest.tscn" id="7_1l0tm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("3_wrm1d")
@@ -250,3 +251,12 @@ position = Vector2(12, -110)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("6_i6g32")]
 position = Vector2(86, -12)
+
+[node name="Node2D" parent="." instance=ExtResource("7_1l0tm")]
+position = Vector2(75, -64)
+
+[node name="Node2D2" parent="." instance=ExtResource("7_1l0tm")]
+position = Vector2(11, -65)
+
+[node name="Node2D3" parent="." instance=ExtResource("7_1l0tm")]
+position = Vector2(76, -128)

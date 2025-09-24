@@ -13,7 +13,7 @@ config_version=5
 config/name="EgyptianFutureDemo"
 run/main_scene="uid://d2olv0ol4qc0a"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://artistAssets/UnusedAssets/icon.svg"
+config/icon="res://Assets/UnusedAssets/icon.svg"
 
 [rendering]
 
