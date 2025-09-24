@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://datj61xevcneh"
-path="res://.godot/imported/mcOld.png-ce157a371ed21f616d774c2dbe586ac9.ctex"
+uid="uid://3425cx0hfgks"
+path="res://.godot/imported/mcIdle.png-c133c0de5beb2e66a52cbb166f7cc42a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/mcOld.png"
-dest_files=["res://.godot/imported/mcOld.png-ce157a371ed21f616d774c2dbe586ac9.ctex"]
+source_file="res://artistAssets/Sprites/mcIdle.png"
+dest_files=["res://.godot/imported/mcIdle.png-c133c0de5beb2e66a52cbb166f7cc42a.ctex"]
 
 [params]
 

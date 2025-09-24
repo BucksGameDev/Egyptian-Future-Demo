@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7up0t2cjatvn"
-path="res://.godot/imported/Sprite-0002.png-68ae958d6759533397ab39c69e6a9f01.ctex"
+uid="uid://bprh2cnv4nau"
+path="res://.godot/imported/earald.png-c7b58865d1fc19e0478f3406ea69e55d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UnusedAssets/Sprite-0002.png"
-dest_files=["res://.godot/imported/Sprite-0002.png-68ae958d6759533397ab39c69e6a9f01.ctex"]
+source_file="res://artistAssets/Pickups/earald.png"
+dest_files=["res://.godot/imported/earald.png-c7b58865d1fc19e0478f3406ea69e55d.ctex"]
 
 [params]
 

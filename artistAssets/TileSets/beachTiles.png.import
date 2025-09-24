@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bprh2cnv4nau"
-path="res://.godot/imported/earald.png-c6ab7f400183299f48c929b718563295.ctex"
+uid="uid://cf7dmhnuv83xx"
+path="res://.godot/imported/beachTiles.png-2386024d3260e0e61d72a98c31cd3236.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pickups/earald.png"
-dest_files=["res://.godot/imported/earald.png-c6ab7f400183299f48c929b718563295.ctex"]
+source_file="res://artistAssets/TileSets/beachTiles.png"
+dest_files=["res://.godot/imported/beachTiles.png-2386024d3260e0e61d72a98c31cd3236.ctex"]
 
 [params]
 

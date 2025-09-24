@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7018d834a1q5"
-path="res://.godot/imported/swan.png-682ab21ea5264bc06cb24d9ac55bef8e.ctex"
+uid="uid://e34hx68tiqs1"
+path="res://.godot/imported/desert&Trees.png-88f5f7853c3d7bb3b3ce932e9369a0b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/swan.png"
-dest_files=["res://.godot/imported/swan.png-682ab21ea5264bc06cb24d9ac55bef8e.ctex"]
+source_file="res://artistAssets/UnusedAssets/desert&Trees.png"
+dest_files=["res://.godot/imported/desert&Trees.png-88f5f7853c3d7bb3b3ce932e9369a0b1.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf7dmhnuv83xx"
-path="res://.godot/imported/beachTiles.png-39982977b0fdb9ffc4f9edf8ad0f3f9a.ctex"
+uid="uid://c7018d834a1q5"
+path="res://.godot/imported/swan.png-d462b472eeaef1381c9506e509c1ad97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TileSets/beachTiles.png"
-dest_files=["res://.godot/imported/beachTiles.png-39982977b0fdb9ffc4f9edf8ad0f3f9a.ctex"]
+source_file="res://artistAssets/Sprites/swan.png"
+dest_files=["res://.godot/imported/swan.png-d462b472eeaef1381c9506e509c1ad97.ctex"]
 
 [params]
 
