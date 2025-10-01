@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djr85uxtx7xoc"
-path="res://.godot/imported/diamond.png-41e2cae23feae08a2d69f472544ba938.ctex"
+uid="uid://3425cx0hfgks"
+path="res://.godot/imported/mcIdle.png-661415d221ae90117d5d560d9c776a68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pickups/diamond.png"
-dest_files=["res://.godot/imported/diamond.png-41e2cae23feae08a2d69f472544ba938.ctex"]
+source_file="res://Assets/exported/Sprites/mcIdle.png"
+dest_files=["res://.godot/imported/mcIdle.png-661415d221ae90117d5d560d9c776a68.ctex"]
 
 [params]
 

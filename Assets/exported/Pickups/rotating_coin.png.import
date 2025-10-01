@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7018d834a1q5"
-path="res://.godot/imported/swan.png-682ab21ea5264bc06cb24d9ac55bef8e.ctex"
+uid="uid://b0v8rlkr87pvd"
+path="res://.godot/imported/rotating_coin.png-c4550cad1a3f6753b0a71e87948e4313.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/swan.png"
-dest_files=["res://.godot/imported/swan.png-682ab21ea5264bc06cb24d9ac55bef8e.ctex"]
+source_file="res://Assets/exported/Pickups/rotating_coin.png"
+dest_files=["res://.godot/imported/rotating_coin.png-c4550cad1a3f6753b0a71e87948e4313.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://c688hvrmmck50"]
 
-[ext_resource type="Texture2D" uid="uid://dg1bbjj8ifo2u" path="res://Assets/Pickups/ruby.png" id="1_1cusl"]
+[ext_resource type="Texture2D" uid="uid://dg1bbjj8ifo2u" path="res://Assets/exported/Pickups/ruby.png" id="1_1cusl"]
 [ext_resource type="Script" uid="uid://c50vp15agqn22" path="res://Scripts/ruby.gd" id="1_pria0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pria0"]
