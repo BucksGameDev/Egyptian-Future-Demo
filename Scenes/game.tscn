@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://behj5mqspcif0" path="res://Scenes/mcHoverPharaoh.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://b58yeghkb5jai" path="res://Scripts/mcHoverPharaoh.gd" id="2_qxrlw"]
-[ext_resource type="Texture2D" uid="uid://cf7dmhnuv83xx" path="res://Assets/TileSets/beachTiles.png" id="3_wrm1d"]
-[ext_resource type="Texture2D" uid="uid://31e4o0ttshew" path="res://Assets/Platforms/platform_bricks.png" id="4_3dryh"]
+[ext_resource type="Texture2D" uid="uid://cf7dmhnuv83xx" path="res://Assets/exported/TileSets/beachTiles.png" id="3_wrm1d"]
+[ext_resource type="Texture2D" uid="uid://31e4o0ttshew" path="res://Assets/exported/Platforms/platform_bricks.png" id="4_3dryh"]
 [ext_resource type="PackedScene" uid="uid://dsvhmmuj2ebt" path="res://Scenes/platformTest.tscn" id="5_wowpa"]
 [ext_resource type="PackedScene" uid="uid://c688hvrmmck50" path="res://Scenes/ruby.tscn" id="6_i6g32"]
 [ext_resource type="PackedScene" uid="uid://dacq1jkvo2ph6" path="res://Scenes/nightSkyTest.tscn" id="7_1l0tm"]

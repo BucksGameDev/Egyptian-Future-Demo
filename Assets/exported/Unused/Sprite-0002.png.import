@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs5vynwub70rd"
-path="res://.godot/imported/NightSky-0001-sheet.png-0ee9f2875d239d7bfffb43292ce0770e.ctex"
+uid="uid://c7up0t2cjatvn"
+path="res://.godot/imported/Sprite-0002.png-d35af0bc66bb4dba95afc13ef77abe38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/BackgroundTiles/NightSky-0001-sheet.png"
-dest_files=["res://.godot/imported/NightSky-0001-sheet.png-0ee9f2875d239d7bfffb43292ce0770e.ctex"]
+source_file="res://Assets/exported/Unused/Sprite-0002.png"
+dest_files=["res://.godot/imported/Sprite-0002.png-d35af0bc66bb4dba95afc13ef77abe38.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e34hx68tiqs1"
-path="res://.godot/imported/desert&Trees.png-92a3c80a4d57214ea8f5599bdc32f7ff.ctex"
+uid="uid://32ohopuceppx"
+path="res://.godot/imported/player_move.png-23c30ce77847a0763b4e17071a001281.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UnusedAssets/desert&Trees.png"
-dest_files=["res://.godot/imported/desert&Trees.png-92a3c80a4d57214ea8f5599bdc32f7ff.ctex"]
+source_file="res://Assets/exported/Sprites/player_move.png"
+dest_files=["res://.godot/imported/player_move.png-23c30ce77847a0763b4e17071a001281.ctex"]
 
 [params]
 

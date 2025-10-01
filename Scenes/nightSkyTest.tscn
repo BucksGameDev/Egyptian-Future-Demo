@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dacq1jkvo2ph6"]
 
-[ext_resource type="Texture2D" uid="uid://cs5vynwub70rd" path="res://Assets/BackgroundTiles/NightSky-0001-sheet.png" id="1_3vcf4"]
+[ext_resource type="Texture2D" uid="uid://cs5vynwub70rd" path="res://Assets/exported/BackgroundTiles/NightSky-0001-sheet.png" id="1_3vcf4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w8p2j"]
 atlas = ExtResource("1_3vcf4")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf7dmhnuv83xx"
-path="res://.godot/imported/beachTiles.png-39982977b0fdb9ffc4f9edf8ad0f3f9a.ctex"
+uid="uid://cs5vynwub70rd"
+path="res://.godot/imported/NightSky-0001-sheet.png-8ca336cdd0f7d2c9ef246590110603b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TileSets/beachTiles.png"
-dest_files=["res://.godot/imported/beachTiles.png-39982977b0fdb9ffc4f9edf8ad0f3f9a.ctex"]
+source_file="res://Assets/exported/BackgroundTiles/NightSky-0001-sheet.png"
+dest_files=["res://.godot/imported/NightSky-0001-sheet.png-8ca336cdd0f7d2c9ef246590110603b1.ctex"]
 
 [params]
 

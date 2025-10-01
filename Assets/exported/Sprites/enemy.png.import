@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3425cx0hfgks"
-path="res://.godot/imported/mcIdle.png-49888ef9cb5731c9dc83223ecdf649de.ctex"
+uid="uid://4dvreitdwif1"
+path="res://.godot/imported/enemy.png-330b3c1ec15d4c4304603e7a2069623e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/mcIdle.png"
-dest_files=["res://.godot/imported/mcIdle.png-49888ef9cb5731c9dc83223ecdf649de.ctex"]
+source_file="res://Assets/exported/Sprites/enemy.png"
+dest_files=["res://.godot/imported/enemy.png-330b3c1ec15d4c4304603e7a2069623e.ctex"]
 
 [params]
 
