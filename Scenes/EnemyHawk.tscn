@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=3 uid="uid://dkqybj7hhe0vr"]
+
+[ext_resource type="Script" uid="uid://yhaa1eiwm5fe" path="res://Scripts/enemy_hawk.gd" id="1_r7tam"]
+[ext_resource type="Texture2D" uid="uid://c6k4oo0jqbryx" path="res://Assets/exported/Sprites/hawk.png" id="1_ts2tl"]
+[ext_resource type="PackedScene" uid="uid://qlmnhe27ubn4" path="res://Scenes/2world_boundary.tscn" id="2_ts2tl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p17wt"]
+atlas = ExtResource("1_ts2tl")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_le54b"]
+atlas = ExtResource("1_ts2tl")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2oti8"]
+atlas = ExtResource("1_ts2tl")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cswwo"]
+atlas = ExtResource("1_ts2tl")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20krj"]
+atlas = ExtResource("1_ts2tl")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_huuai"]
+atlas = ExtResource("1_ts2tl")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bk6hr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p17wt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_le54b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2oti8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cswwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20krj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_huuai")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r7tam"]
+size = Vector2(20, 4)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_r7tam")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.671875, 0.671875)
+sprite_frames = SubResource("SpriteFrames_bk6hr")
+autoplay = "default"
+
+[node name="World Boundary" parent="." instance=ExtResource("2_ts2tl")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World Boundary"]
+shape = SubResource("RectangleShape2D_r7tam")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(17, -1)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-17, 0)
