@@ -63,9 +63,9 @@ animations = [{
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = -1
+position = Vector2(588, 448)
+scale = Vector2(16.8203, 16.8203)
 sprite_frames = SubResource("SpriteFrames_21djm")
 autoplay = "default"
 frame = 6
 frame_progress = 1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
