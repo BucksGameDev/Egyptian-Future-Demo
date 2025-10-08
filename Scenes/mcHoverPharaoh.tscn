@@ -1,7 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://behj5mqspcif0"]
+[gd_scene load_steps=17 format=3 uid="uid://behj5mqspcif0"]
 
+[ext_resource type="Script" uid="uid://b58yeghkb5jai" path="res://Scripts/mcHoverPharaoh.gd" id="1_hnpca"]
 [ext_resource type="Texture2D" uid="uid://3425cx0hfgks" path="res://Assets/exported/Sprites/mcIdle.png" id="1_jhksu"]
 [ext_resource type="Texture2D" uid="uid://32ohopuceppx" path="res://Assets/exported/Sprites/player_move.png" id="2_jhksu"]
+[ext_resource type="Texture2D" uid="uid://cufhaj5yk0mrv" path="res://Assets/exported/Sprites/istockphoto-2037395446-612x612.jpg" id="4_f5rvx"]
+[ext_resource type="AudioStream" uid="uid://c3t1l5shvsbql" path="res://Assets/exported/Sounds/Desert ambient music [686838].mp3" id="5_f5rvx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kxr6v"]
 atlas = ExtResource("1_jhksu")
@@ -61,15 +64,105 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i41my"]
 radius = 8.0
 
+[sub_resource type="Animation" id="Animation_3fgs7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_5b3am"]
+resource_name = "Sound"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i357s"]
+_data = {
+&"RESET": SubResource("Animation_3fgs7"),
+&"Sound": SubResource("Animation_5b3am")
+}
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 collision_layer = 2
+script = ExtResource("1_hnpca")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ipk5o")
-animation = &"Idle"
+animation = &"Move"
 autoplay = "Idle"
-frame_progress = 0.211094
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_i41my")
+
+[node name="ButtonRight" type="Button" parent="."]
+visible = false
+offset_left = -68.0
+offset_top = 69.0
+offset_right = -34.0
+offset_bottom = 88.0
+
+[node name="Sprite2D" type="Sprite2D" parent="ButtonRight"]
+visible = false
+position = Vector2(17, 9)
+scale = Vector2(0.0552325, 0.0552325)
+texture = ExtResource("4_f5rvx")
+
+[node name="ButtonLeft" type="Button" parent="."]
+visible = false
+offset_left = -91.0
+offset_top = 88.0
+offset_right = -62.0
+offset_bottom = 107.0
+rotation = 3.15179
+
+[node name="Sprite2D" type="Sprite2D" parent="ButtonLeft"]
+visible = false
+position = Vector2(14.1404, 9.80044)
+scale = Vector2(0.0552325, 0.0552325)
+texture = ExtResource("4_f5rvx")
+
+[node name="ButtonUp" type="Button" parent="."]
+visible = false
+offset_left = -88.0
+offset_top = 70.0
+offset_right = -54.0
+offset_bottom = 88.0
+rotation = -1.56674
+
+[node name="Sprite2D" type="Sprite2D" parent="ButtonUp"]
+position = Vector2(18.0363, 8.92695)
+scale = Vector2(0.0552325, 0.0552325)
+texture = ExtResource("4_f5rvx")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_f5rvx")
+stream_paused = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_i357s")
+}
+
+[connection signal="pressed" from="ButtonRight" to="." method="_on_button_right_pressed"]
+[connection signal="pressed" from="ButtonLeft" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="ButtonUp" to="." method="_on_button_up_pressed"]
