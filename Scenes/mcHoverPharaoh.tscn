@@ -1,8 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://behj5mqspcif0"]
+[gd_scene load_steps=19 format=3 uid="uid://behj5mqspcif0"]
 
 [ext_resource type="Script" uid="uid://b58yeghkb5jai" path="res://Scripts/mcHoverPharaoh.gd" id="1_hnpca"]
 [ext_resource type="Texture2D" uid="uid://3425cx0hfgks" path="res://Assets/exported/Sprites/mcIdle.png" id="1_jhksu"]
-[ext_resource type="Texture2D" uid="uid://32ohopuceppx" path="res://Assets/exported/Sprites/player_move.png" id="2_jhksu"]
+[ext_resource type="Texture2D" uid="uid://boxw7rb2k77mn" path="res://Assets/exported/Sprites/player_move_revised_2.png" id="3_hnpca"]
 [ext_resource type="Texture2D" uid="uid://cufhaj5yk0mrv" path="res://Assets/exported/Sprites/istockphoto-2037395446-612x612.jpg" id="4_f5rvx"]
 [ext_resource type="AudioStream" uid="uid://c3t1l5shvsbql" path="res://Assets/exported/Sounds/Desert ambient music [686838].mp3" id="5_f5rvx"]
 
@@ -22,13 +22,21 @@ region = Rect2(64, 0, 32, 32)
 atlas = ExtResource("1_jhksu")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jhksu"]
-atlas = ExtResource("2_jhksu")
-region = Rect2(0, 0, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_3fgs7"]
-atlas = ExtResource("2_jhksu")
-region = Rect2(32, 0, 32, 32)
+atlas = ExtResource("3_hnpca")
+region = Rect2(0, 0, 32, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i357s"]
+atlas = ExtResource("3_hnpca")
+region = Rect2(32, 0, 32, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3byw"]
+atlas = ExtResource("3_hnpca")
+region = Rect2(64, 0, 32, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0hc7"]
+atlas = ExtResource("3_hnpca")
+region = Rect2(96, 0, 32, 40)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ipk5o"]
 animations = [{
@@ -51,10 +59,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jhksu")
+"texture": SubResource("AtlasTexture_3fgs7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3fgs7")
+"texture": SubResource("AtlasTexture_i357s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3byw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0hc7")
 }],
 "loop": true,
 "name": &"Move",
