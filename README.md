@@ -18,7 +18,7 @@ We use **GitHub**, **Git LFS**, and **Godot**. Day-to-day work happens on the de
 - `/Assets/`
   -   `/raw/`                 Source art — LFS + locking[^1].
   -  `/exported/`               Game-ready assets Godot references (PNG/WEBP/GLB/OGG, etc)
-      - `/BackgroundTiles/ /Pickups/ /Platforms/ /Sprites/ /TileSets/ /Unused/`
+	  - `/BackgroundTiles/ /Pickups/ /Platforms/ /Sprites/ /TileSets/ /Unused/`
 - `/Scenes/`                 .tscn levels/scenes (text, mergeable)
 - `/Scripts/`                .gd (and .gd.uid) scripts
 - `/docs/`                   guidelines, notes, etc.
