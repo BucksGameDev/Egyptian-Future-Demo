@@ -16,21 +16,12 @@ We use **GitHub**, **Git LFS**, and **Godot**. Day-to-day work happens on the de
 
 - `/project.godot`
 - `/Assets/`
-<<<<<<< HEAD
-  -   `/raw/`                 Source art — LFS + locking[^1].\
-  -  `/exported/`               Game-ready assets Godot references (PNG/WEBP/GLB/OGG, etc)\
-	  - `/BackgroundTiles/ /Pickups/ /Platforms/ /Sprites/ /TileSets/ /Unused/`
-- `/Scenes/`                 .tscn levels/scenes (text, mergeable)\
-- `/Scripts/`                .gd (and .gd.uid) scripts\
-- `/docs/`                   guidelines, notes, etc.\
-=======
   -   `/raw/`                 Source art — LFS + locking[^1].
   -  `/exported/`               Game-ready assets Godot references (PNG/WEBP/GLB/OGG, etc)
-	  - `/BackgroundTiles/ /Pickups/ /Platforms/ /Sprites/ /TileSets/ /Unused/`
+      - `/BackgroundTiles/ /Pickups/ /Platforms/ /Sprites/ /TileSets/ /Unused/`
 - `/Scenes/`                 .tscn levels/scenes (text, mergeable)
 - `/Scripts/`                .gd (and .gd.uid) scripts
 - `/docs/`                   guidelines, notes, etc.
->>>>>>> 97cc62aefb8f7c87af4a9e4fb621497ba3567e5a
 
 >[!WARNING]
 >Move/rename assets inside Godot (not in Explorer or Folders) so references update automatically.
