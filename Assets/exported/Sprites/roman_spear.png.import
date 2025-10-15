@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rfb7swschf4g"
-path="res://.godot/imported/BRICK.png-2766e33cc56504e8f0a1ca0d22d918b7.ctex"
+uid="uid://bqta661w5anoc"
+path="res://.godot/imported/roman_spear.png-7a9b7960973c3ec4de9b76291724207b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BRICK.png"
-dest_files=["res://.godot/imported/BRICK.png-2766e33cc56504e8f0a1ca0d22d918b7.ctex"]
+source_file="res://Assets/exported/Sprites/roman_spear.png"
+dest_files=["res://.godot/imported/roman_spear.png-7a9b7960973c3ec4de9b76291724207b.ctex"]
 
 [params]
 
