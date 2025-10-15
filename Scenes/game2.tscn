@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://bd04dgrs6hd4g"]
+[gd_scene load_steps=26 format=3 uid="uid://bd04dgrs6hd4g"]
 
 [ext_resource type="PackedScene" uid="uid://behj5mqspcif0" path="res://Scenes/mcHoverPharaoh.tscn" id="1_2iyw8"]
+[ext_resource type="Script" uid="uid://bf4drxj5j4pbc" path="res://Scenes/game.gd" id="1_yosci"]
 [ext_resource type="Texture2D" uid="uid://cf7dmhnuv83xx" path="res://Assets/exported/TileSets/beachTiles.png" id="3_yosci"]
 [ext_resource type="Texture2D" uid="uid://31e4o0ttshew" path="res://Assets/exported/Platforms/platform_bricks.png" id="4_31mwo"]
 [ext_resource type="PackedScene" uid="uid://dacq1jkvo2ph6" path="res://Scenes/nightSkyTest.tscn" id="5_u2vha"]
@@ -10,6 +11,7 @@
 [ext_resource type="Script" uid="uid://q4kfr8f015yh" path="res://Scripts/ruby (2).gd" id="9_1uoq3"]
 [ext_resource type="PackedScene" uid="uid://dkqybj7hhe0vr" path="res://Scenes/EnemyHawk.tscn" id="9_er416"]
 [ext_resource type="Script" uid="uid://i03qm8nacqrq" path="res://Scenes/label_2.gd" id="10_1uoq3"]
+[ext_resource type="AudioStream" uid="uid://c3t1l5shvsbql" path="res://Assets/exported/Sounds/Desert ambient music [686838].mp3" id="12_31mwo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("3_yosci")
@@ -110,7 +112,45 @@ _data = {
 &"move": SubResource("Animation_o5yvi")
 }
 
+[sub_resource type="Animation" id="Animation_u2vha"]
+resource_name = "new_animation"
+length = 235.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_pw40m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1umn5"]
+_data = {
+&"RESET": SubResource("Animation_pw40m"),
+&"new_animation": SubResource("Animation_u2vha")
+}
+
 [node name="MainGameDemo" type="Node2D"]
+script = ExtResource("1_yosci")
 
 [node name="EgyptianGuy" parent="." instance=ExtResource("1_2iyw8")]
 position = Vector2(-1, -14)
@@ -206,3 +246,11 @@ offset_right = 139.0
 offset_bottom = -425.0
 text = "Screenshot this to get points!"
 script = ExtResource("10_1uoq3")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_31mwo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1umn5")
+}

@@ -1,10 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://behj5mqspcif0"]
+[gd_scene load_steps=18 format=3 uid="uid://behj5mqspcif0"]
 
 [ext_resource type="Script" uid="uid://b58yeghkb5jai" path="res://Scripts/mcHoverPharaoh.gd" id="1_hnpca"]
 [ext_resource type="Texture2D" uid="uid://3425cx0hfgks" path="res://Assets/exported/Sprites/mcIdle.png" id="1_jhksu"]
 [ext_resource type="Texture2D" uid="uid://32ohopuceppx" path="res://Assets/exported/Sprites/player_move.png" id="2_jhksu"]
 [ext_resource type="Texture2D" uid="uid://cufhaj5yk0mrv" path="res://Assets/exported/Sprites/istockphoto-2037395446-612x612.jpg" id="4_f5rvx"]
-[ext_resource type="AudioStream" uid="uid://c3t1l5shvsbql" path="res://Assets/exported/Sounds/Desert ambient music [686838].mp3" id="5_f5rvx"]
+[ext_resource type="AudioStream" uid="uid://dfp6syrbwcfeu" path="res://Assets/exported/Sounds/hoverboardsound_1.mp3" id="5_f5rvx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kxr6v"]
 atlas = ExtResource("1_jhksu")
@@ -78,10 +78,21 @@ tracks/0/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer2D:pitch_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5]
+}
 
 [sub_resource type="Animation" id="Animation_5b3am"]
 resource_name = "Sound"
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -89,14 +100,31 @@ tracks/0/path = NodePath("AudioStreamPlayer2D:playing")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.98),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true]
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_f5rvx"]
+resource_name = "Move left-right"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer2D:pitch_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.25),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i357s"]
 _data = {
+&"Move left-right": SubResource("Animation_f5rvx"),
 &"RESET": SubResource("Animation_3fgs7"),
 &"Sound": SubResource("Animation_5b3am")
 }
@@ -156,12 +184,14 @@ texture = ExtResource("4_f5rvx")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_f5rvx")
-stream_paused = true
+pitch_scale = 1.5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_i357s")
 }
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="pressed" from="ButtonRight" to="." method="_on_button_right_pressed"]
 [connection signal="pressed" from="ButtonLeft" to="." method="_on_button_2_pressed"]
