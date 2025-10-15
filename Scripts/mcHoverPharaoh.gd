@@ -1,13 +1,24 @@
 extends CharacterBody2D
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-func _ready() -> void:
-	animation_player.play("Sound")
+
+#func _ready() -> void:
+	#animation_player.play("Sound")
 	
 	
 const SPEED = 200.0
 const JUMP_VELOCITY = -400.0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var JumpSound: AudioStreamPlayer2D = $JumpSound
+
+@onready var MoveSounds: AudioStreamPlayer2D = $MoveSounds
+
+func _input(event):
+	# Keep only the one-shot Spacebar/Jump sound logic here
+	if event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode == KEY_SPACE:
+			JumpSound.pitch_scale = 1.3
+			JumpSound.volume_db = -10
+			JumpSound.play()
 
 
 func _physics_process(delta: float) -> void:
@@ -23,6 +34,20 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
+	if direction != 0 and is_on_floor():
+		# Play the sound if the player is moving (direction != 0) AND the sound is not currently playing
+		if not MoveSounds.playing:
+			# Set the sound parameters for movement
+			MoveSounds.pitch_scale = 0.9
+			MoveSounds.volume_db = -11
+			
+			# NOTE: For continuous play, the sound file in your AudioStreamPlayer 
+			# MUST have its "Loop" property enabled in the Inspector!
+			MoveSounds.play()
+	else:
+		# Stop the sound if the player stops moving or jumps
+		if MoveSounds.playing:
+			MoveSounds.stop()
 	if direction:
 		velocity.x = direction * SPEED
 	else:
