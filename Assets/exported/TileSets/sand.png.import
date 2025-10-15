@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clie6ciu7o6p0"
-path="res://.godot/imported/otherruby.png-92cfcf81c719eac5196f132c30a5d454.ctex"
+uid="uid://ctn5yin0wtmqm"
+path="res://.godot/imported/sand.png-9a3bccd8d4edb4e9b4648667034d12e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/exported/Pickups/otherruby.png"
-dest_files=["res://.godot/imported/otherruby.png-92cfcf81c719eac5196f132c30a5d454.ctex"]
+source_file="res://Assets/exported/TileSets/sand.png"
+dest_files=["res://.godot/imported/sand.png-9a3bccd8d4edb4e9b4648667034d12e8.ctex"]
 
 [params]
 
