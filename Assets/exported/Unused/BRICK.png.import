@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5oinapdthbvw"
-path="res://.godot/imported/RedEvilBackground-0001.png-687d5b1123f25eecfdf6b6e40b326bc3.ctex"
+uid="uid://bh757fy7o45vy"
+path="res://.godot/imported/BRICK.png-093690fed0511b40db3b6b18fe335d47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/exported/BackgroundTiles/RedEvilBackground-0001.png"
-dest_files=["res://.godot/imported/RedEvilBackground-0001.png-687d5b1123f25eecfdf6b6e40b326bc3.ctex"]
+source_file="res://Assets/exported/Unused/BRICK.png"
+dest_files=["res://.godot/imported/BRICK.png-093690fed0511b40db3b6b18fe335d47.ctex"]
 
 [params]
 
