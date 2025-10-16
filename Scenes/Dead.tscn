@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://btscqy0kfhest"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wmru8"]
+load_path = "res://.godot/imported/images.jpg-12c96867eb334b0945945c352f57bd2a.ctex"
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(3, 4)
+scale = Vector2(1.79762, 1.79762)
+texture = SubResource("CompressedTexture2D_wmru8")

@@ -1,0 +1,145 @@
+[gd_scene load_steps=15 format=3 uid="uid://c688hvrmmck50"]
+
+[ext_resource type="Texture2D" uid="uid://dg1bbjj8ifo2u" path="res://Assets/exported/Pickups/ruby.png" id="1_1cusl"]
+[ext_resource type="Script" uid="uid://c50vp15agqn22" path="res://Scripts/ruby.gd" id="1_pria0"]
+[ext_resource type="AudioStream" uid="uid://dbbkt0ws5s2qk" path="res://Assets/exported/Sounds/Coin Pickup.mp3 [478647].mp3" id="2_b1m4j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v0wxk"]
+radius = 4.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pria0"]
+atlas = ExtResource("1_1cusl")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8y63"]
+atlas = ExtResource("1_1cusl")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isped"]
+atlas = ExtResource("1_1cusl")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wf348"]
+atlas = ExtResource("1_1cusl")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3cxiw"]
+atlas = ExtResource("1_1cusl")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vv7y4"]
+atlas = ExtResource("1_1cusl")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pc3xi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pria0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8y63")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isped")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wf348")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3cxiw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vv7y4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="Animation" id="Animation_y1upy"]
+resource_name = "Pickup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_0rp1g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h2kbo"]
+_data = {
+&"Pickup": SubResource("Animation_y1upy"),
+&"RESET": SubResource("Animation_0rp1g")
+}
+
+[node name="Area2D" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_pria0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_v0wxk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pc3xi")
+autoplay = "default"
+frame_progress = 0.673927
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_b1m4j")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_h2kbo")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.586
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
