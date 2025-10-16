@@ -1,15 +1,17 @@
-[gd_scene load_steps=21 format=3 uid="uid://bd04dgrs6hd4g"]
+[gd_scene load_steps=26 format=3 uid="uid://bd04dgrs6hd4g"]
 
 [ext_resource type="PackedScene" uid="uid://behj5mqspcif0" path="res://Scenes/mcHoverPharaoh.tscn" id="1_2iyw8"]
 [ext_resource type="Texture2D" uid="uid://cf7dmhnuv83xx" path="res://Assets/exported/TileSets/beachTiles.png" id="3_yosci"]
 [ext_resource type="Texture2D" uid="uid://31e4o0ttshew" path="res://Assets/exported/Platforms/platform_bricks.png" id="4_31mwo"]
 [ext_resource type="PackedScene" uid="uid://dacq1jkvo2ph6" path="res://Scenes/nightSkyTest.tscn" id="5_u2vha"]
 [ext_resource type="PackedScene" uid="uid://dgvkdxc4n5bbu" path="res://Scenes/world_boundary.tscn" id="6_pw40m"]
+[ext_resource type="AudioStream" uid="uid://cx1qcwkpdd11u" path="res://Assets/exported/Sounds/fall_effect_1.mp3" id="6_yosci"]
 [ext_resource type="PackedScene" uid="uid://dsvhmmuj2ebt" path="res://Scenes/platformTest.tscn" id="7_1umn5"]
 [ext_resource type="PackedScene" uid="uid://c688hvrmmck50" path="res://Scenes/ruby.tscn" id="8_aurdq"]
 [ext_resource type="Script" uid="uid://q4kfr8f015yh" path="res://Scripts/ruby (2).gd" id="9_1uoq3"]
 [ext_resource type="PackedScene" uid="uid://dkqybj7hhe0vr" path="res://Scenes/EnemyHawk.tscn" id="9_er416"]
 [ext_resource type="Script" uid="uid://i03qm8nacqrq" path="res://Scenes/label_2.gd" id="10_1uoq3"]
+[ext_resource type="AudioStream" uid="uid://c3t1l5shvsbql" path="res://Assets/exported/Sounds/Desert ambient music [686838].mp3" id="12_31mwo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("3_yosci")
@@ -33,6 +35,42 @@ sources/0 = SubResource("TileSetAtlasSource_wrm1d")
 sources/2 = SubResource("TileSetAtlasSource_wowpa")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_v158k"]
+
+[sub_resource type="Animation" id="Animation_1phco"]
+resource_name = "Falling"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Falling sound:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.92),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_nb51f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Falling sound:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nnt18"]
+_data = {
+&"Falling": SubResource("Animation_1phco"),
+&"RESET": SubResource("Animation_nb51f")
+}
 
 [sub_resource type="Animation" id="Animation_ldgsr"]
 length = 0.001
@@ -138,6 +176,14 @@ position = Vector2(-514, -514)
 position = Vector2(190, 52)
 shape = SubResource("WorldBoundaryShape2D_v158k")
 
+[node name="Falling sound" type="AudioStreamPlayer2D" parent="KillZone"]
+stream = ExtResource("6_yosci")
+
+[node name="Falling Soundtrack" type="AnimationPlayer" parent="KillZone"]
+libraries = {
+&"": SubResource("AnimationLibrary_nnt18")
+}
+
 [node name="Platforms" type="Node2D" parent="."]
 
 [node name="PlatformTest3" parent="Platforms" instance=ExtResource("7_1umn5")]
@@ -206,3 +252,7 @@ offset_right = 139.0
 offset_bottom = -425.0
 text = "Screenshot this to get points!"
 script = ExtResource("10_1uoq3")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_31mwo")
+autoplay = true

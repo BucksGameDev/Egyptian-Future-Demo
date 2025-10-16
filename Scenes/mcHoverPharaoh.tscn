@@ -1,10 +1,12 @@
-[gd_scene load_steps=17 format=3 uid="uid://behj5mqspcif0"]
+[gd_scene load_steps=18 format=3 uid="uid://behj5mqspcif0"]
 
 [ext_resource type="Script" uid="uid://b58yeghkb5jai" path="res://Scripts/mcHoverPharaoh.gd" id="1_hnpca"]
 [ext_resource type="Texture2D" uid="uid://3425cx0hfgks" path="res://Assets/exported/Sprites/mcIdle.png" id="1_jhksu"]
-[ext_resource type="Texture2D" uid="uid://32ohopuceppx" path="res://Assets/exported/Sprites/player_move.png" id="2_jhksu"]
+[ext_resource type="Texture2D" uid="uid://boxw7rb2k77mn" path="res://Assets/exported/Sprites/player_move_revised_2.png" id="3_hnpca"]
+[ext_resource type="PackedScene" uid="uid://btscqy0kfhest" path="res://Scenes/Dead.tscn" id="4_5b3am"]
 [ext_resource type="Texture2D" uid="uid://cufhaj5yk0mrv" path="res://Assets/exported/Sprites/istockphoto-2037395446-612x612.jpg" id="4_f5rvx"]
-[ext_resource type="AudioStream" uid="uid://c3t1l5shvsbql" path="res://Assets/exported/Sounds/Desert ambient music [686838].mp3" id="5_f5rvx"]
+[ext_resource type="AudioStream" uid="uid://ounad4vhlpvs" path="res://Assets/exported/Sounds/hoverboardsoundTrimmed.mp3" id="6_5b3am"]
+[ext_resource type="AudioStream" uid="uid://wjim5isys5gy" path="res://Assets/exported/Sounds/hoverboardsound_Trim2.mp3" id="7_3fgs7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kxr6v"]
 atlas = ExtResource("1_jhksu")
@@ -22,13 +24,21 @@ region = Rect2(64, 0, 32, 32)
 atlas = ExtResource("1_jhksu")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jhksu"]
-atlas = ExtResource("2_jhksu")
-region = Rect2(0, 0, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_3fgs7"]
-atlas = ExtResource("2_jhksu")
-region = Rect2(32, 0, 32, 32)
+atlas = ExtResource("3_hnpca")
+region = Rect2(0, 0, 32, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i357s"]
+atlas = ExtResource("3_hnpca")
+region = Rect2(32, 0, 32, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3byw"]
+atlas = ExtResource("3_hnpca")
+region = Rect2(64, 0, 32, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0hc7"]
+atlas = ExtResource("3_hnpca")
+region = Rect2(96, 0, 32, 40)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ipk5o"]
 animations = [{
@@ -51,10 +61,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jhksu")
+"texture": SubResource("AtlasTexture_3fgs7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3fgs7")
+"texture": SubResource("AtlasTexture_i357s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3byw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0hc7")
 }],
 "loop": true,
 "name": &"Move",
@@ -64,43 +80,6 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i41my"]
 radius = 8.0
 
-[sub_resource type="Animation" id="Animation_3fgs7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AudioStreamPlayer2D:playing")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_5b3am"]
-resource_name = "Sound"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AudioStreamPlayer2D:playing")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_i357s"]
-_data = {
-&"RESET": SubResource("Animation_3fgs7"),
-&"Sound": SubResource("Animation_5b3am")
-}
-
 [node name="CharacterBody2D" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_hnpca")
@@ -109,6 +88,9 @@ script = ExtResource("1_hnpca")
 sprite_frames = SubResource("SpriteFrames_ipk5o")
 animation = &"Move"
 autoplay = "Idle"
+
+[node name="Sprite2D" parent="." instance=ExtResource("4_5b3am")]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
@@ -154,13 +136,11 @@ position = Vector2(18.0363, 8.92695)
 scale = Vector2(0.0552325, 0.0552325)
 texture = ExtResource("4_f5rvx")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_f5rvx")
+[node name="MoveSounds" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_5b3am")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_i357s")
-}
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_3fgs7")
 
 [connection signal="pressed" from="ButtonRight" to="." method="_on_button_right_pressed"]
 [connection signal="pressed" from="ButtonLeft" to="." method="_on_button_2_pressed"]
