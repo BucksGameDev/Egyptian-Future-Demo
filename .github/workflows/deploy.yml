@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - chore/update-export-presets
+      - main
 
 jobs:
   deploy:
