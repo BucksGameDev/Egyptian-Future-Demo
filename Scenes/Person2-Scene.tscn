@@ -1,0 +1,253 @@
+[gd_scene load_steps=32 format=3 uid="uid://7yd81rhqkhuq"]
+
+[ext_resource type="PackedScene" uid="uid://behj5mqspcif0" path="res://Scenes/mcHoverPharaoh.tscn" id="1_l63ea"]
+[ext_resource type="Texture2D" uid="uid://cf7dmhnuv83xx" path="res://Assets/exported/TileSets/beachTiles.png" id="2_qxw2e"]
+[ext_resource type="Texture2D" uid="uid://31e4o0ttshew" path="res://Assets/exported/Platforms/platform_bricks.png" id="3_h37wk"]
+[ext_resource type="Texture2D" uid="uid://b4k5wpjnn5p3y" path="res://Assets/exported/TileSets/grassy_sand.png" id="4_ep77b"]
+[ext_resource type="Texture2D" uid="uid://ctn5yin0wtmqm" path="res://Assets/exported/TileSets/sand.png" id="5_ayq66"]
+[ext_resource type="Texture2D" uid="uid://c8c04yb7judxq" path="res://Assets/exported/TileSets/DeadGrass-0002.png" id="6_id73a"]
+[ext_resource type="Texture2D" uid="uid://c6xl343fh0b7n" path="res://Assets/exported/TileSets/DeadGrass-0001.png" id="7_03k3a"]
+[ext_resource type="PackedScene" uid="uid://dacq1jkvo2ph6" path="res://Scenes/nightSkyTest.tscn" id="8_ny28i"]
+[ext_resource type="PackedScene" uid="uid://dgvkdxc4n5bbu" path="res://Scenes/world_boundary.tscn" id="9_l0gix"]
+[ext_resource type="AudioStream" uid="uid://cx1qcwkpdd11u" path="res://Assets/exported/Sounds/fall_effect_1.mp3" id="10_v0blp"]
+[ext_resource type="PackedScene" uid="uid://dsvhmmuj2ebt" path="res://Scenes/platformTest.tscn" id="11_ma1dm"]
+[ext_resource type="PackedScene" uid="uid://dkqybj7hhe0vr" path="res://Scenes/EnemyHawk.tscn" id="12_7fmj4"]
+[ext_resource type="PackedScene" uid="uid://c688hvrmmck50" path="res://Scenes/ruby.tscn" id="13_45thb"]
+[ext_resource type="AudioStream" uid="uid://dbbkt0ws5s2qk" path="res://Assets/exported/Sounds/Coin Pickup.mp3 [478647].mp3" id="14_b6cxd"]
+[ext_resource type="AudioStream" uid="uid://c3t1l5shvsbql" path="res://Assets/exported/Sounds/Desert ambient music [686838].mp3" id="15_iwbt6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
+texture = ExtResource("2_qxw2e")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+3:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wowpa"]
+texture = ExtResource("3_h37wk")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rfjv2"]
+texture = ExtResource("4_ep77b")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nnt18"]
+texture = ExtResource("5_ayq66")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ewbju"]
+texture = ExtResource("6_id73a")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 6.7447, 8, 6.7447, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 6.7447, 8, 6.7447, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_85qyi"]
+texture = ExtResource("7_03k3a")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_3dryh"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_wrm1d")
+sources/2 = SubResource("TileSetAtlasSource_wowpa")
+sources/3 = SubResource("TileSetAtlasSource_rfjv2")
+sources/4 = SubResource("TileSetAtlasSource_nnt18")
+sources/5 = SubResource("TileSetAtlasSource_ewbju")
+sources/6 = SubResource("TileSetAtlasSource_85qyi")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_v158k"]
+distance = 7.0
+
+[sub_resource type="Animation" id="Animation_1phco"]
+resource_name = "Falling"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Falling sound:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.92),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_nb51f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Falling sound:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nnt18"]
+_data = {
+&"Falling": SubResource("Animation_1phco"),
+&"RESET": SubResource("Animation_nb51f")
+}
+
+[sub_resource type="Animation" id="Animation_rku1e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-173, -316)]
+}
+
+[sub_resource type="Animation" id="Animation_o5yvi"]
+resource_name = "move"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-173, -316), Vector2(-64, -316)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rfjv2"]
+_data = {
+&"RESET": SubResource("Animation_rku1e"),
+&"move": SubResource("Animation_o5yvi")
+}
+
+[sub_resource type="Animation" id="Animation_rfjv2"]
+resource_name = "Pickup"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1phco"]
+_data = {
+&"Pickup": SubResource("Animation_rfjv2")
+}
+
+[node name="MainGameDemo" type="Node2D"]
+
+[node name="EgyptianGuy" parent="." instance=ExtResource("1_l63ea")]
+position = Vector2(-1, -14)
+
+[node name="Camera2D" type="Camera2D" parent="EgyptianGuy"]
+position = Vector2(1, 14)
+zoom = Vector2(2.25, 2.25)
+limit_bottom = 100
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-20, 0)
+tile_set = SubResource("TileSet_3dryh")
+format = 2
+layer_0/tile_data = PackedInt32Array(65534, 131075, 0, 65535, 131075, 0, 0, 131075, 0, 1, 131075, 0, 2, 131075, 0, 3, 131075, 0, 4, 131075, 0, 5, 131075, 0, 6, 131075, 0, 65533, 131075, 0, 65532, 131075, 0, 65531, 131075, 0, 65530, 131075, 0, 65529, 131075, 0, 65528, 131075, 0, 65527, 131075, 0, 7, 131075, 0, 458704, 4, 0, 524240, 4, 0, -327728, 4, 0, -262192, 4, 0, -196656, 4, 0, -131120, 4, 0, -65584, 4, 0, -48, 4, 0, 65488, 4, 0, 131024, 4, 0, 196560, 4, 0, 262096, 4, 0, 327632, 4, 0, 393168, 4, 0, 65526, 4, 0, 65525, 4, 0, 65524, 4, 0, 65523, 4, 0, 65522, 4, 0, 65521, 4, 0, 65520, 4, 0, 65519, 4, 0, 65518, 4, 0, 65517, 4, 0, 65516, 4, 0, 65515, 4, 0, 65514, 4, 0, 65513, 4, 0, 65512, 4, 0, 65511, 4, 0, 65510, 4, 0, 65509, 4, 0, 65508, 4, 0, 65507, 4, 0, 65506, 4, 0, 65505, 4, 0, 65504, 4, 0, 65503, 4, 0, 65502, 4, 0, 65501, 4, 0, 65500, 4, 0, 65499, 4, 0, 65498, 4, 0, 65497, 4, 0, 65496, 4, 0, 65495, 4, 0, 65494, 4, 0, 65493, 4, 0, 65492, 4, 0, 65491, 4, 0, 65490, 4, 0, 65489, 4, 0, -5046300, 4, 0, -5046299, 4, 0, -5046298, 4, 0, -5046297, 4, 0, -5046296, 4, 0, -5046295, 4, 0, -5046294, 4, 0, -5046293, 4, 0, -5046292, 4, 0, -5046291, 4, 0, -5046290, 4, 0, -5046289, 4, 0, -5046288, 4, 0, -5046287, 4, 0, -5046286, 4, 0, -5046285, 4, 0, -5046284, 4, 0, -5046283, 4, 0, -5046282, 4, 0, -5046281, 4, 0, -5046280, 4, 0, -5046279, 4, 0, -5046278, 4, 0, -5046277, 4, 0, -5046276, 4, 0, -5046275, 4, 0, -5046274, 4, 0, -5046273, 4, 0, -5111808, 4, 0, -5111807, 4, 0, -5111806, 4, 0, -5111805, 4, 0, -5111804, 4, 0, -5111803, 4, 0, -5111802, 4, 0, -5111801, 4, 0, -5111800, 4, 0, -5111799, 4, 0, -5111798, 4, 0, -5111797, 4, 0, -5111796, 4, 0, -5111795, 4, 0, -5111794, 4, 0, -5111793, 4, 0, -5111792, 4, 0, -5111791, 4, 0, -5111790, 4, 0, -5111789, 4, 0, -5111788, 4, 0, -5111787, 4, 0, -5111786, 4, 0, -5111785, 4, 0, -5111784, 4, 0, -5111783, 4, 0, -5111782, 4, 0, -5111781, 4, 0, -5111780, 4, 0, -5111779, 4, 0, -5111778, 4, 0, -5111777, 4, 0, -5111776, 4, 0, -5111775, 4, 0, -5111774, 4, 0, -5111773, 4, 0, -5111772, 4, 0, -5111771, 4, 0, -5111770, 4, 0, -5111769, 4, 0, -5111768, 4, 0, -5111767, 4, 0, -5111766, 4, 0, -5111765, 4, 0, -5111764, 4, 0, -5111763, 4, 0, -5111762, 4, 0, -5111761, 4, 0, -5111760, 4, 0, -5111759, 4, 0, -5111758, 4, 0, -5111757, 4, 0, -5111756, 4, 0, -5111755, 4, 0, -5111754, 4, 0, -5111753, 4, 0, -5111752, 4, 0, -5111751, 4, 0, -5111750, 4, 0, -5111749, 4, 0, -5111748, 4, 0, -5111747, 4, 0, -5111746, 4, 0, -5111745, 4, 0, -5111744, 4, 0, -5111743, 4, 0, -5111742, 4, 0, -5111741, 4, 0, -5111740, 4, 0, -5111739, 4, 0, -5111738, 4, 0, -5111737, 4, 0, -5111736, 4, 0, -5111735, 4, 0, -5111734, 4, 0, -5111733, 4, 0, -5111732, 4, 0, -5046301, 4, 0, -5046302, 4, 0, -5046303, 4, 0, -5046304, 4, 0, -5046305, 4, 0, -5046306, 4, 0, -5046307, 4, 0, -5046308, 4, 0, -5046309, 4, 0, -5046310, 4, 0, -5046311, 4, 0, -5046312, 4, 0, -5046313, 4, 0, -5046314, 4, 0, -5046315, 4, 0, -5046316, 4, 0, -5046317, 4, 0, -5046318, 4, 0, -5046319, 4, 0, -5046320, 4, 0, -5046321, 4, 0, -5046322, 4, 0, -5046323, 4, 0, -5046324, 4, 0, -5046325, 4, 0, -5046326, 4, 0, -5046327, 4, 0, -5046328, 4, 0, -5046329, 4, 0, -5046330, 4, 0, -5046331, 4, 0, -5046332, 4, 0, -5046333, 4, 0, -5046334, 4, 0, -5046335, 4, 0, -5046336, 4, 0, -393264, 4, 0, -458800, 4, 0, -524336, 4, 0, -589872, 4, 0, -655408, 4, 0, -720944, 4, 0, -786480, 4, 0, -852016, 4, 0, -917552, 4, 0, -983088, 4, 0, -1048624, 4, 0, -1114160, 4, 0, -1179696, 4, 0, -1245232, 4, 0, -1310768, 4, 0, -1376304, 4, 0, -1441840, 4, 0, -1507376, 4, 0, -1572912, 4, 0, -1638448, 4, 0, -1703984, 4, 0, -1769520, 4, 0, -1835056, 4, 0, -1900592, 4, 0, -1966128, 4, 0, -2031664, 4, 0, -2097200, 4, 0, -2162736, 4, 0, -2228272, 4, 0, -2293808, 4, 0, -2359344, 4, 0, -2424880, 4, 0, -2490416, 4, 0, -2555952, 4, 0, -2621488, 4, 0, -2687024, 4, 0, -2752560, 4, 0, -2818096, 4, 0, -2883632, 4, 0, -2949168, 4, 0, -3014704, 4, 0, -3080240, 4, 0, -3145776, 4, 0, -3211312, 4, 0, -3276848, 4, 0, -3342384, 4, 0, -3407920, 4, 0, -3473456, 4, 0, -3538992, 4, 0, -3604528, 4, 0, -3670064, 4, 0, -3735600, 4, 0, -3801136, 4, 0, -3866672, 4, 0, -3932208, 4, 0, -3997744, 4, 0, -4063280, 4, 0, -4128816, 4, 0, -4194352, 4, 0, -4259888, 4, 0, -4325424, 4, 0, -4390960, 4, 0, -4456496, 4, 0, -4522032, 4, 0, -4587568, 4, 0, -4653104, 4, 0, -4718640, 4, 0, -4784176, 4, 0, -4849712, 4, 0, -4915248, 4, 0, -4980784, 4, 0, -5111856, 4, 0, -5177392, 4, 0, -5242928, 4, 0, -65475, 4, 0, -131011, 4, 0, -196547, 4, 0, -262083, 4, 0, -327619, 4, 0, 8, 4, 0, 9, 4, 0, 10, 4, 0, 11, 4, 0, 12, 4, 0, 13, 4, 0, 14, 4, 0, 15, 4, 0, 16, 4, 0, 17, 4, 0, 18, 4, 0, 19, 4, 0, 20, 4, 0, 21, 4, 0, 22, 4, 0, 23, 4, 0, 24, 4, 0, 25, 4, 0, 26, 4, 0, 27, 4, 0, 28, 4, 0, 29, 4, 0, 30, 4, 0, 31, 4, 0, 32, 4, 0, 33, 4, 0, 34, 4, 0, 35, 4, 0, 36, 4, 0, 37, 4, 0, 38, 4, 0, 39, 4, 0, 40, 4, 0, 41, 4, 0, 42, 4, 0, 43, 4, 0, 44, 4, 0, 45, 4, 0, 46, 4, 0, 47, 4, 0, 48, 4, 0, 49, 4, 0, 50, 4, 0, 51, 4, 0, 52, 4, 0, 53, 4, 0, 54, 4, 0, 55, 4, 0, 56, 4, 0, 57, 4, 0, 58, 4, 0, 59, 4, 0, 60, 4, 0, 61, 4, 0, 62, 4, 0, 63, 4, 0, 64, 4, 0, 65, 4, 0, 66, 4, 0, 67, 4, 0, 68, 4, 0, 69, 4, 0, 70, 4, 0, 71, 4, 0, 72, 4, 0, 73, 4, 0, 74, 4, 0, 75, 4, 0, 76, 4, 0, -393155, 4, 0, -458691, 4, 0, -524227, 4, 0, -589763, 4, 0, -655299, 4, 0, -720835, 4, 0, -786371, 4, 0, -851907, 4, 0, -917443, 4, 0, -982979, 4, 0, -1048515, 4, 0, -1114051, 4, 0, -1179587, 4, 0, -1245123, 4, 0, -1310659, 4, 0, -1376195, 4, 0, -1441731, 4, 0, -1507267, 4, 0, -1572803, 4, 0, -1638339, 4, 0, -1703875, 4, 0, -1769411, 4, 0, -1834947, 4, 0, -1900483, 4, 0, -1966019, 4, 0, -2031555, 4, 0, -2097091, 4, 0, -2162627, 4, 0, -2228163, 4, 0, -2293699, 4, 0, -2359235, 4, 0, -2424771, 4, 0, -2490307, 4, 0, -2555843, 4, 0, -2621379, 4, 0, -2686915, 4, 0, -2752451, 4, 0, -2817987, 4, 0, -2883523, 4, 0, -2949059, 4, 0, -3014595, 4, 0, -3080131, 4, 0, -3145667, 4, 0, -3211203, 4, 0, -3276739, 4, 0, -3342275, 4, 0, -3407811, 4, 0, -3473347, 4, 0, -3538883, 4, 0, -3604419, 4, 0, -3669955, 4, 0, -3735491, 4, 0, -3801027, 4, 0, -3866563, 4, 0, -3932099, 4, 0, -3997635, 4, 0, -4063171, 4, 0, -4128707, 4, 0, -4194243, 4, 0, -4259779, 4, 0, -4325315, 4, 0, -4390851, 4, 0, -4456387, 4, 0, -4521923, 4, 0, -4587459, 4, 0, -4652995, 4, 0, -4718531, 4, 0, -4784067, 4, 0, -4849603, 4, 0, -4915139, 4, 0, -4980675, 4, 0, -5046211, 4, 0, -5177283, 4, 0)
+
+[node name="Background" parent="." instance=ExtResource("8_ny28i")]
+z_index = -1
+position = Vector2(-514, -514)
+
+[node name="KillZone" parent="." instance=ExtResource("9_l0gix")]
+
+[node name="Killzone Hitbox" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(-1, 50)
+shape = SubResource("WorldBoundaryShape2D_v158k")
+
+[node name="Falling sound" type="AudioStreamPlayer2D" parent="KillZone"]
+stream = ExtResource("10_v0blp")
+
+[node name="Falling Soundtrack" type="AnimationPlayer" parent="KillZone"]
+libraries = {
+&"": SubResource("AnimationLibrary_nnt18")
+}
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="PlatformTest5" parent="Platforms" instance=ExtResource("11_ma1dm")]
+position = Vector2(52, -50)
+
+[node name="PlatformTest7" parent="Platforms" instance=ExtResource("11_ma1dm")]
+position = Vector2(-173, -316)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/PlatformTest7"]
+libraries = {
+&"": SubResource("AnimationLibrary_rfjv2")
+}
+autoplay = "move"
+
+[node name="Pickups" type="Node2D" parent="."]
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Hawk4" parent="Enemies" instance=ExtResource("12_7fmj4")]
+position = Vector2(9, -44)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -136.0
+offset_top = -154.0
+offset_right = 145.0
+offset_bottom = -79.0
+text = "Click the tilemap node to begin
+Make level Inside outer box
+"
+
+[node name="Area2D" parent="." instance=ExtResource("13_45thb")]
+position = Vector2(-44, -22)
+
+[node name="CoinPickup" type="AnimationPlayer" parent="Area2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_1phco")
+}
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="Area2D"]
+stream = ExtResource("14_b6cxd")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_iwbt6")
+autoplay = true
