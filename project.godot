@@ -13,8 +13,6 @@ config_version=5
 config/name="EgyptianFutureDemo"
 run/main_scene="uid://d2olv0ol4qc0a"
 config/features=PackedStringArray("4.5", "Forward Plus")
-run/main_scene="res://Scenes/Person3-Scene.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://Assets/exported/Unused/icon.svg"
 
 [rendering]
