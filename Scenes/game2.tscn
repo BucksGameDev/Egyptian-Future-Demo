@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c688hvrmmck50" path="res://Scenes/ruby.tscn" id="8_aurdq"]
 [ext_resource type="Script" uid="uid://q4kfr8f015yh" path="res://Scripts/ruby (2).gd" id="9_1uoq3"]
 [ext_resource type="PackedScene" uid="uid://dkqybj7hhe0vr" path="res://Scenes/EnemyHawk.tscn" id="9_er416"]
-[ext_resource type="Script" uid="uid://i03qm8nacqrq" path="res://Scenes/label_2.gd" id="10_1uoq3"]
+[ext_resource type="Script" uid="uid://i03qm8nacqrq" path="res://Scripts/label_2.gd" id="10_1uoq3"]
 [ext_resource type="AudioStream" uid="uid://c3t1l5shvsbql" path="res://Assets/exported/Sounds/Desert ambient music [686838].mp3" id="12_31mwo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
