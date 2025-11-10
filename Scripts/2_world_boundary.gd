@@ -12,5 +12,3 @@ func _on_body_entered(body: Node2D) -> void:
 func _on_timer_timeout() -> void:
 	#reloads level
 	get_tree().reload_current_scene()
-
-s
