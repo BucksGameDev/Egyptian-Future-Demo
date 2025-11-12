@@ -1,7 +1,9 @@
-[gd_scene load_steps=34 format=3 uid="uid://bkgcc4s0vu8g2"]
+[gd_scene load_steps=36 format=3 uid="uid://b3ibhxaievq58"]
 
 [ext_resource type="PackedScene" uid="uid://behj5mqspcif0" path="res://Scenes/mcHoverPharaoh.tscn" id="1_u0dse"]
 [ext_resource type="Texture2D" uid="uid://cf7dmhnuv83xx" path="res://Assets/exported/TileSets/beachTiles.png" id="2_dsrgf"]
+[ext_resource type="FontFile" uid="uid://cl2s6bniw4b5f" path="res://Assets/exported/Fonts/minecraft/Minecraft.ttf" id="2_ergc2"]
+[ext_resource type="Script" uid="uid://nqvuxcuijos5" path="res://Scenes/counter.gd" id="2_t7b3i"]
 [ext_resource type="Texture2D" uid="uid://31e4o0ttshew" path="res://Assets/exported/Platforms/platform_bricks.png" id="3_t7b3i"]
 [ext_resource type="Texture2D" uid="uid://b4k5wpjnn5p3y" path="res://Assets/exported/TileSets/grassy_sand.png" id="4_ergc2"]
 [ext_resource type="Texture2D" uid="uid://ctn5yin0wtmqm" path="res://Assets/exported/TileSets/sand.png" id="5_47qt3"]
@@ -12,10 +14,10 @@
 [ext_resource type="AudioStream" uid="uid://cx1qcwkpdd11u" path="res://Assets/exported/Sounds/fall_effect_1.mp3" id="10_81ayb"]
 [ext_resource type="PackedScene" uid="uid://dsvhmmuj2ebt" path="res://Scenes/platformTest.tscn" id="11_1fg0v"]
 [ext_resource type="PackedScene" uid="uid://dkqybj7hhe0vr" path="res://Scenes/EnemyHawk.tscn" id="12_3jdjt"]
-[ext_resource type="Script" uid="uid://c7yg7kbq0wc0t" path="res://Scripts/JacksonsLvl.gd" id="14_dsrgf"]
+[ext_resource type="Script" path="res://Scripts/JacksonsLvl.gd" id="14_dsrgf"]
 [ext_resource type="AudioStream" uid="uid://dbbkt0ws5s2qk" path="res://Assets/exported/Sounds/Coin Pickup.mp3 [478647].mp3" id="14_swfal"]
 [ext_resource type="AudioStream" uid="uid://c3t1l5shvsbql" path="res://Assets/exported/Sounds/Desert ambient music [686838].mp3" id="15_yiwk5"]
-[ext_resource type="PackedScene" uid="uid://b0wje0td6rlmr" path="res://Scenes/coin.tscn" id="17_ergc2"]
+[ext_resource type="PackedScene" path="res://Scenes/coin.tscn" id="17_ergc2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("2_dsrgf")
@@ -213,6 +215,15 @@ limit_bottom = 100
 limit_smoothed = true
 position_smoothing_enabled = true
 
+[node name="Counter" type="Label" parent="EgyptianGuy"]
+z_index = 2
+offset_left = 30.0
+offset_top = -55.0
+offset_right = 70.0
+offset_bottom = -32.0
+theme_override_fonts/font = ExtResource("2_ergc2")
+script = ExtResource("2_t7b3i")
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-11, 29)
 tile_set = SubResource("TileSet_3dryh")
@@ -253,6 +264,7 @@ offset_left = 47.0
 offset_top = -405.0
 offset_right = 506.0
 offset_bottom = -330.0
+theme_override_fonts/font = ExtResource("2_ergc2")
 text = "AHHHHHHHHHHHH THE BIRDS AHHHHHHHHHHHHHHHHH
 "
 
@@ -347,3 +359,5 @@ offset_right = 368.0
 offset_bottom = -403.0
 theme_override_font_sizes/font_size = 39
 text = "Game Finish"
+
+[connection signal="child_exiting_tree" from="Pickups" to="EgyptianGuy/Counter" method="_on_pickups_child_exiting_tree"]
