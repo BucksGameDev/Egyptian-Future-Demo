@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://dacq1jkvo2ph6"]
+[gd_scene load_steps=12 format=3 uid="uid://dacq1jkvo2ph6"]
 
 [ext_resource type="Texture2D" uid="uid://cs5vynwub70rd" path="res://Assets/exported/BackgroundTiles/NightSky-0001-sheet.png" id="1_3vcf4"]
+[ext_resource type="Texture2D" uid="uid://5oinapdthbvw" path="res://Assets/exported/BackgroundTiles/RedEvilBackground-0001.png" id="2_w8p2j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w8p2j"]
 atlas = ExtResource("1_3vcf4")
@@ -30,6 +31,10 @@ region = Rect2(320, 0, 64, 64)
 atlas = ExtResource("1_3vcf4")
 region = Rect2(384, 0, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_21djm"]
+atlas = ExtResource("2_w8p2j")
+region = Rect2(0, 0, 132, 90)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_21djm"]
 animations = [{
 "frames": [{
@@ -57,15 +62,22 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21djm")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
 }]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = -1
-position = Vector2(588, 448)
+position = Vector2(598, -103)
 scale = Vector2(16.8203, 16.8203)
 sprite_frames = SubResource("SpriteFrames_21djm")
-autoplay = "default"
-frame = 6
-frame_progress = 1.0
+animation = &"new_animation"
+autoplay = "new_animation"
