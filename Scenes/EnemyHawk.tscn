@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://yhaa1eiwm5fe" path="res://Scripts/enemy_hawk.gd" id="1_r7tam"]
 [ext_resource type="Texture2D" uid="uid://c6k4oo0jqbryx" path="res://Assets/exported/Sprites/hawk.png" id="1_ts2tl"]
 [ext_resource type="PackedScene" uid="uid://qlmnhe27ubn4" path="res://Scenes/2world_boundary.tscn" id="2_ts2tl"]
-[ext_resource type="Script" uid="uid://cb02ux4d4eny1" path="res://Scenes/2_world_boundary.gd" id="4_p17wt"]
+[ext_resource type="Script" uid="uid://cb02ux4d4eny1" path="res://Scripts/2_world_boundary.gd" id="4_p17wt"]
 [ext_resource type="AudioStream" uid="uid://di5d26rlyschu" path="res://Assets/exported/Sounds/Hawk⧸Eagle Cry 2.mp3" id="5_le54b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p17wt"]
