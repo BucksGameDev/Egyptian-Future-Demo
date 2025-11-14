@@ -6,7 +6,7 @@ var coins
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	coins = 0
-	counter.text = "coins: " + str(coins)
+	counter.text = "coins: " + str(coins) + "/5"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,5 +16,5 @@ func _process(delta: float) -> void:
 
 func _on_pickups_child_exiting_tree(node: Node) -> void:
 	coins += 1
-	counter.text = "coins: " + str(coins)
+	counter.text = "coins: " + str(coins) + "/5"
 	

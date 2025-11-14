@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://ba63f3bq3j7yu"]
+[gd_scene load_steps=34 format=3 uid="uid://b7x6m0ho37w0g"]
 
 [ext_resource type="PackedScene" uid="uid://behj5mqspcif0" path="res://Scenes/mcHoverPharaoh.tscn" id="1_iu8f2"]
 [ext_resource type="Texture2D" uid="uid://cf7dmhnuv83xx" path="res://Assets/exported/TileSets/beachTiles.png" id="2_5iqsx"]
@@ -129,6 +129,10 @@ _data = {
 &"RESET": SubResource("Animation_nb51f")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_qkcwk"]
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
 [sub_resource type="Animation" id="Animation_xr8tk"]
 length = 0.001
 tracks/0/type = "value"
@@ -165,7 +169,7 @@ _data = {
 &"coin pickup": SubResource("Animation_rvxuh")
 }
 
-[node name="MainGameDemo" type="Node2D"]
+[node name="MainGameDemo2" type="Node2D"]
 
 [node name="EgyptianGuy" parent="." instance=ExtResource("1_iu8f2")]
 position = Vector2(-1, -14)
@@ -254,7 +258,9 @@ offset_right = 169.0
 offset_bottom = -11.0
 theme_override_fonts/font = ExtResource("2_qkcwk")
 text = "Collect 5 coins to proceed
+LVL 1/3
 "
+label_settings = SubResource("LabelSettings_qkcwk")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_2p8v5")

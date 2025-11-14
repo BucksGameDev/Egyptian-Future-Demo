@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://yk6a2xdcxdfy"]
+[gd_scene load_steps=40 format=3 uid="uid://7yd81rhqkhuq"]
 
 [ext_resource type="PackedScene" uid="uid://behj5mqspcif0" path="res://Scenes/mcHoverPharaoh.tscn" id="1_l63ea"]
 [ext_resource type="Script" uid="uid://nqvuxcuijos5" path="res://Scenes/counter.gd" id="2_h37wk"]
@@ -245,6 +245,10 @@ _data = {
 &"platform_2_move": SubResource("Animation_h37wk")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_ep77b"]
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
 [sub_resource type="Animation" id="Animation_03k3a"]
 length = 0.001
 tracks/0/type = "value"
@@ -281,7 +285,7 @@ _data = {
 &"pickup sound": SubResource("Animation_id73a")
 }
 
-[node name="MainGameDemo" type="Node2D"]
+[node name="MainGameDemo2" type="Node2D"]
 
 [node name="EgyptianGuy" parent="." instance=ExtResource("1_l63ea")]
 position = Vector2(-1, -14)
@@ -403,7 +407,8 @@ offset_right = 145.0
 offset_bottom = -79.0
 theme_override_fonts/font = ExtResource("14_ep77b")
 text = "Collect all five coins, hawks are guarding!
-"
+LVL 2/3"
+label_settings = SubResource("LabelSettings_ep77b")
 
 [node name="Pickups" type="Node2D" parent="."]
 script = ExtResource("13_h37wk")
