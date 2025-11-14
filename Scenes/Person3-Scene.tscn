@@ -237,7 +237,7 @@ layer_0/tile_data = PackedInt32Array(458704, 4, 0, 524240, 4, 0, -327728, 4, 0, 
 
 [node name="Background" parent="." instance=ExtResource("8_vdemu")]
 z_index = -1
-position = Vector2(-469, -98)
+position = Vector2(-421, -114)
 
 [node name="KillZone" parent="." instance=ExtResource("9_ql2wj")]
 
