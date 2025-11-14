@@ -1,11 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://d2olv0ol4qc0a"]
+[gd_scene load_steps=19 format=3 uid="uid://dtukitowpbyuw"]
 
 [ext_resource type="PackedScene" uid="uid://behj5mqspcif0" path="res://Scenes/mcHoverPharaoh.tscn" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://cf7dmhnuv83xx" path="res://Assets/exported/TileSets/beachTiles.png" id="3_wrm1d"]
 [ext_resource type="Texture2D" uid="uid://31e4o0ttshew" path="res://Assets/exported/Platforms/platform_bricks.png" id="4_3dryh"]
 [ext_resource type="PackedScene" uid="uid://c688hvrmmck50" path="res://Scenes/ruby.tscn" id="6_i6g32"]
 [ext_resource type="PackedScene" uid="uid://dacq1jkvo2ph6" path="res://Scenes/nightSkyTest.tscn" id="7_1l0tm"]
-[ext_resource type="FontFile" uid="uid://cl2s6bniw4b5f" path="res://Assets/exported/Fonts/minecraft/Minecraft.ttf" id="7_ldgsr"]
 [ext_resource type="PackedScene" uid="uid://dgvkdxc4n5bbu" path="res://Scenes/world_boundary.tscn" id="8_h4fw4"]
 [ext_resource type="AudioStream" uid="uid://dbbkt0ws5s2qk" path="res://Assets/exported/Sounds/Coin Pickup.mp3 [478647].mp3" id="10_ldgsr"]
 [ext_resource type="AudioStream" uid="uid://c3t1l5shvsbql" path="res://Assets/exported/Sounds/Desert ambient music [686838].mp3" id="11_rku1e"]
@@ -70,10 +69,6 @@ _data = {
 &"RESET": SubResource("Animation_nb51f")
 }
 
-[sub_resource type="LabelSettings" id="LabelSettings_ldgsr"]
-outline_size = 2
-outline_color = Color(0, 0, 0, 1)
-
 [sub_resource type="Animation" id="Animation_rfjv2"]
 resource_name = "Pickup"
 
@@ -82,7 +77,7 @@ _data = {
 &"Pickup": SubResource("Animation_rfjv2")
 }
 
-[node name="MainGameDemo" type="Node2D"]
+[node name="MainGameDemo2" type="Node2D"]
 
 [node name="EgyptianGuy" parent="." instance=ExtResource("1_ebmjs")]
 position = Vector2(-1, -14)
@@ -129,11 +124,9 @@ offset_left = -160.0
 offset_top = -99.0
 offset_right = 121.0
 offset_bottom = -24.0
-theme_override_fonts/font = ExtResource("7_ldgsr")
 text = "Test lvl - Pick up the ruby to proceed
 Arrow Keys To Move
 Spacebar to Jump"
-label_settings = SubResource("LabelSettings_ldgsr")
 
 [node name="Area2D" parent="." instance=ExtResource("6_i6g32")]
 position = Vector2(-55, -13)
