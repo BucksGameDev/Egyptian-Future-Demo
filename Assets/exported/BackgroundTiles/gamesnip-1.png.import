@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bivlxapo3i7qe"
-path="res://.godot/imported/Sand&Tree.png-5245c5a55a8d0e5d15cd0d223d32d180.ctex"
+uid="uid://b6hubite65mb5"
+path="res://.godot/imported/gamesnip-1.png-cb235fec4b22307ae16b643c294b0098.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/exported/TileSets/Sand&Tree.png"
-dest_files=["res://.godot/imported/Sand&Tree.png-5245c5a55a8d0e5d15cd0d223d32d180.ctex"]
+source_file="res://Assets/exported/BackgroundTiles/gamesnip-1.png"
+dest_files=["res://.godot/imported/gamesnip-1.png-cb235fec4b22307ae16b643c294b0098.ctex"]
 
 [params]
 

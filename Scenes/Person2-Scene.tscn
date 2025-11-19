@@ -17,7 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://dbbkt0ws5s2qk" path="res://Assets/exported/Sounds/Coin Pickup.mp3 [478647].mp3" id="14_b6cxd"]
 [ext_resource type="FontFile" uid="uid://cl2s6bniw4b5f" path="res://Assets/exported/Fonts/minecraft/Minecraft.ttf" id="14_ep77b"]
 [ext_resource type="AudioStream" uid="uid://c3t1l5shvsbql" path="res://Assets/exported/Sounds/Desert ambient music [686838].mp3" id="15_iwbt6"]
-[ext_resource type="PackedScene" path="res://Scenes/coin.tscn" id="17_ep77b"]
+[ext_resource type="PackedScene" uid="uid://dloigauh8p8de" path="res://Scenes/coin.tscn" id="17_ep77b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("2_qxw2e")

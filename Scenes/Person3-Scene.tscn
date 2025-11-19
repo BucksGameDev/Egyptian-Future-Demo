@@ -17,7 +17,7 @@
 [ext_resource type="Script" path="res://Scripts/JacksonsLvl.gd" id="14_dsrgf"]
 [ext_resource type="AudioStream" uid="uid://dbbkt0ws5s2qk" path="res://Assets/exported/Sounds/Coin Pickup.mp3 [478647].mp3" id="14_swfal"]
 [ext_resource type="AudioStream" uid="uid://c3t1l5shvsbql" path="res://Assets/exported/Sounds/Desert ambient music [686838].mp3" id="15_yiwk5"]
-[ext_resource type="PackedScene" path="res://Scenes/coin.tscn" id="17_ergc2"]
+[ext_resource type="PackedScene" uid="uid://dloigauh8p8de" path="res://Scenes/coin.tscn" id="17_ergc2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("2_dsrgf")
