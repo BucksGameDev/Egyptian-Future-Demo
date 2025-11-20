@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bmmmlblhnpoij"]
+[gd_scene load_steps=12 format=3 uid="uid://v43t3nur2itl"]
 
-[ext_resource type="Script" uid="uid://b8droubwod2r3" path="res://Scenes/credits.gd" id="1_7xmno"]
+[ext_resource type="Script" path="res://Scenes/credits.gd" id="1_7xmno"]
 [ext_resource type="FontFile" uid="uid://cl2s6bniw4b5f" path="res://Assets/exported/Fonts/minecraft/Minecraft.ttf" id="1_xbebw"]
 [ext_resource type="FontFile" uid="uid://dejybtwutbqt0" path="res://Assets/exported/Fonts/pixeled/Pixeled.ttf" id="2_7xmno"]
 
