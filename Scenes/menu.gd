@@ -22,3 +22,15 @@ func _on_options_pressed() -> void:
 func _on_credits_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Credits.tscn")
 	
+
+
+func _on_lvl_1_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Person1-Scene.tscn")
+
+
+func _on_lvl_2_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Person2-Scene.tscn")
+
+
+func _on_lvl_3_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Person3-Scene.tscn")

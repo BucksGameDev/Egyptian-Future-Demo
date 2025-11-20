@@ -86,9 +86,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -224.5
+offset_left = -311.0
 offset_top = -69.0
-offset_right = 224.5
+offset_right = 138.0
 offset_bottom = 173.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -145,6 +145,75 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kk3ma")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_wwsa2")
 text = "credits"
 
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 155.0
+offset_top = -69.0
+offset_right = 306.0
+offset_bottom = 173.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 19
+
+[node name="LVL 1" type="Button" parent="VBoxContainer2"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.287449, 0.225672, 0.0582517, 1)
+theme_override_colors/font_focus_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_fonts/font = ExtResource("3_wwsa2")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_iqepy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nrnbx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kk3ma")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cayip")
+text = "LVL 1"
+
+[node name="LVL 2" type="Button" parent="VBoxContainer2"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.287449, 0.225672, 0.0582517, 1)
+theme_override_colors/font_focus_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_fonts/font = ExtResource("3_wwsa2")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_iqepy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nrnbx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kk3ma")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_158mb")
+text = "LVL 2"
+
+[node name="LVL 3" type="Button" parent="VBoxContainer2"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.287449, 0.225672, 0.0582517, 1)
+theme_override_colors/font_focus_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_fonts/font = ExtResource("3_wwsa2")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_iqepy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nrnbx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kk3ma")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wwsa2")
+text = "LVL 3"
+
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer2/LVL 1" to="." method="_on_lvl_1_pressed"]
+[connection signal="pressed" from="VBoxContainer2/LVL 2" to="." method="_on_lvl_2_pressed"]
+[connection signal="pressed" from="VBoxContainer2/LVL 3" to="." method="_on_lvl_3_pressed"]
