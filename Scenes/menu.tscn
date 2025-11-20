@@ -1,8 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://bq0c3bx15vbpu"]
+[gd_scene load_steps=14 format=3 uid="uid://dk2kr8a4ef221"]
 
-[ext_resource type="Script" uid="uid://d1l6l3f2tuh27" path="res://Scenes/menu.gd" id="1_158mb"]
-[ext_resource type="Texture2D" uid="uid://b6hubite65mb5" path="res://Assets/exported/BackgroundTiles/gamesnip-1.png" id="1_cayip"]
-[ext_resource type="FontFile" uid="uid://c1id6mmgmb2nq" path="res://Assets/exported/Fonts/pixelout/Pixelout Personal Use Only.ttf" id="2_cayip"]
+[ext_resource type="Script" path="res://Scenes/menu.gd" id="1_158mb"]
+[ext_resource type="Texture2D" path="res://Assets/exported/BackgroundTiles/gamesnip-1.png" id="1_cayip"]
+[ext_resource type="FontFile" path="res://Assets/exported/Fonts/pixelout/Pixelout Personal Use Only.ttf" id="2_cayip"]
 [ext_resource type="FontFile" uid="uid://dejybtwutbqt0" path="res://Assets/exported/Fonts/pixeled/Pixeled.ttf" id="3_wwsa2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l48gv"]
@@ -146,5 +146,3 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_wwsa2")
 text = "credits"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
