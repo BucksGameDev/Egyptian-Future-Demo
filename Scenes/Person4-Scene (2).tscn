@@ -18,6 +18,26 @@
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("2_0njki")
+[gd_scene load_steps=32 format=3 uid="uid://b2uswe7fgijd2"]
+
+[ext_resource type="PackedScene" uid="uid://behj5mqspcif0" path="res://Scenes/mcHoverPharaoh.tscn" id="1_f38nf"]
+[ext_resource type="Texture2D" uid="uid://cf7dmhnuv83xx" path="res://Assets/exported/TileSets/beachTiles.png" id="2_vxg7y"]
+[ext_resource type="Texture2D" uid="uid://31e4o0ttshew" path="res://Assets/exported/Platforms/platform_bricks.png" id="3_sjyvc"]
+[ext_resource type="Texture2D" uid="uid://b4k5wpjnn5p3y" path="res://Assets/exported/TileSets/grassy_sand.png" id="4_qctt3"]
+[ext_resource type="Texture2D" uid="uid://ctn5yin0wtmqm" path="res://Assets/exported/TileSets/sand.png" id="5_35f5t"]
+[ext_resource type="Texture2D" uid="uid://c8c04yb7judxq" path="res://Assets/exported/TileSets/DeadGrass-0002.png" id="6_14blq"]
+[ext_resource type="Texture2D" uid="uid://c6xl343fh0b7n" path="res://Assets/exported/TileSets/DeadGrass-0001.png" id="7_ckppx"]
+[ext_resource type="PackedScene" uid="uid://dacq1jkvo2ph6" path="res://Scenes/nightSkyTest.tscn" id="8_8l7tw"]
+[ext_resource type="PackedScene" uid="uid://dgvkdxc4n5bbu" path="res://Scenes/world_boundary.tscn" id="9_tl4lr"]
+[ext_resource type="AudioStream" uid="uid://cx1qcwkpdd11u" path="res://Assets/exported/Sounds/fall_effect_1.mp3" id="10_sh7qd"]
+[ext_resource type="PackedScene" uid="uid://dsvhmmuj2ebt" path="res://Scenes/platformTest.tscn" id="11_o71yb"]
+[ext_resource type="PackedScene" uid="uid://dkqybj7hhe0vr" path="res://Scenes/EnemyHawk.tscn" id="12_qekqc"]
+[ext_resource type="PackedScene" uid="uid://c688hvrmmck50" path="res://Scenes/ruby.tscn" id="13_4ysa8"]
+[ext_resource type="AudioStream" uid="uid://dbbkt0ws5s2qk" path="res://Assets/exported/Sounds/Coin Pickup.mp3 [478647].mp3" id="14_3l3wc"]
+[ext_resource type="AudioStream" uid="uid://c3t1l5shvsbql" path="res://Assets/exported/Sounds/Desert ambient music [686838].mp3" id="15_mawvo"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
+texture = ExtResource("2_vxg7y")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -27,6 +47,7 @@ texture = ExtResource("2_0njki")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wowpa"]
 texture = ExtResource("3_jbeq2")
+texture = ExtResource("3_sjyvc")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -34,6 +55,7 @@ texture = ExtResource("3_jbeq2")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rfjv2"]
 texture = ExtResource("4_7gkce")
+texture = ExtResource("4_qctt3")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -47,6 +69,7 @@ texture = ExtResource("4_7gkce")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nnt18"]
 texture = ExtResource("5_nte8t")
+texture = ExtResource("5_35f5t")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -60,6 +83,7 @@ texture = ExtResource("5_nte8t")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ewbju"]
 texture = ExtResource("6_mfrcg")
+texture = ExtResource("6_14blq")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 6.7447, 8, 6.7447, 8, 8, -8, 8)
 1:0/0 = 0
@@ -71,6 +95,7 @@ texture = ExtResource("6_mfrcg")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_85qyi"]
 texture = ExtResource("7_fe2eq")
+texture = ExtResource("7_ckppx")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
@@ -174,6 +199,7 @@ _data = {
 [node name="MainGameDemo" type="Node2D"]
 
 [node name="EgyptianGuy" parent="." instance=ExtResource("1_2yb4t")]
+[node name="EgyptianGuy" parent="." instance=ExtResource("1_f38nf")]
 position = Vector2(-1, -14)
 
 [node name="Camera2D" type="Camera2D" parent="EgyptianGuy"]
@@ -194,6 +220,11 @@ z_index = -1
 position = Vector2(-514, -514)
 
 [node name="KillZone" parent="." instance=ExtResource("9_8a6dr")]
+[node name="Background" parent="." instance=ExtResource("8_8l7tw")]
+z_index = -1
+position = Vector2(-514, -514)
+
+[node name="KillZone" parent="." instance=ExtResource("9_tl4lr")]
 
 [node name="Killzone Hitbox" type="CollisionShape2D" parent="KillZone"]
 position = Vector2(-1, 50)
@@ -201,6 +232,7 @@ shape = SubResource("WorldBoundaryShape2D_v158k")
 
 [node name="Falling sound" type="AudioStreamPlayer2D" parent="KillZone"]
 stream = ExtResource("10_52o5d")
+stream = ExtResource("10_sh7qd")
 
 [node name="Falling Soundtrack" type="AnimationPlayer" parent="KillZone"]
 libraries = {
@@ -213,6 +245,10 @@ libraries = {
 position = Vector2(52, -50)
 
 [node name="PlatformTest7" parent="Platforms" instance=ExtResource("11_3a62o")]
+[node name="PlatformTest5" parent="Platforms" instance=ExtResource("11_o71yb")]
+position = Vector2(52, -50)
+
+[node name="PlatformTest7" parent="Platforms" instance=ExtResource("11_o71yb")]
 position = Vector2(-173, -316)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/PlatformTest7"]
@@ -226,6 +262,7 @@ autoplay = "move"
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Hawk4" parent="Enemies" instance=ExtResource("12_ptt1q")]
+[node name="Hawk4" parent="Enemies" instance=ExtResource("12_qekqc")]
 position = Vector2(9, -44)
 
 [node name="Label" type="Label" parent="."]
@@ -238,6 +275,7 @@ Make level Inside outer box
 "
 
 [node name="Area2D" parent="." instance=ExtResource("13_hwdel")]
+[node name="Area2D" parent="." instance=ExtResource("13_4ysa8")]
 position = Vector2(-44, -22)
 
 [node name="CoinPickup" type="AnimationPlayer" parent="Area2D"]
@@ -250,4 +288,8 @@ stream = ExtResource("14_li3mq")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_hdv16")
+stream = ExtResource("14_3l3wc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_mawvo")
 autoplay = true
