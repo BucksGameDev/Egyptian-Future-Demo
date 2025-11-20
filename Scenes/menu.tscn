@@ -1,8 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://cnc12hutegxn5"]
+[gd_scene load_steps=14 format=3 uid="uid://dk2kr8a4ef221"]
 
-[ext_resource type="Script" uid="uid://d1l6l3f2tuh27" path="res://Scenes/menu.gd" id="1_158mb"]
-[ext_resource type="Texture2D" uid="uid://b6hubite65mb5" path="res://Assets/exported/BackgroundTiles/gamesnip-1.png" id="1_cayip"]
-[ext_resource type="FontFile" uid="uid://c1id6mmgmb2nq" path="res://Assets/exported/Fonts/pixelout/Pixelout Personal Use Only.ttf" id="2_cayip"]
+[ext_resource type="Script" path="res://Scenes/menu.gd" id="1_158mb"]
+[ext_resource type="Texture2D" path="res://Assets/exported/BackgroundTiles/gamesnip-1.png" id="1_cayip"]
+[ext_resource type="FontFile" path="res://Assets/exported/Fonts/pixelout/Pixelout Personal Use Only.ttf" id="2_cayip"]
 [ext_resource type="FontFile" uid="uid://dejybtwutbqt0" path="res://Assets/exported/Fonts/pixeled/Pixeled.ttf" id="3_wwsa2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l48gv"]
@@ -14,18 +14,8 @@ font = ExtResource("2_cayip")
 font_size = 84
 font_color = Color(0.802935, 0.673695, 0.118647, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cayip"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kk3ma"]
-bg_color = Color(0.645292, 0.596531, 0.30863, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-shadow_size = 3
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nrnbx"]
-bg_color = Color(0.840859, 0.791559, 0.499185, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqepy"]
+bg_color = Color(0.912808, 0.877211, 0.663741, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -39,13 +29,23 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqepy"]
-bg_color = Color(0.912808, 0.877211, 0.663741, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nrnbx"]
+bg_color = Color(0.840859, 0.791559, 0.499185, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kk3ma"]
+bg_color = Color(0.645292, 0.596531, 0.30863, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 3
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cayip"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_158mb"]
 
@@ -97,52 +97,52 @@ theme_override_constants/separation = 19
 [node name="Start" type="Button" parent="VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
-theme_override_colors/font_hover_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_colors/font_color = Color(0.287449, 0.225672, 0.0582517, 1)
 theme_override_colors/font_focus_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_colors/font_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_fonts/font = ExtResource("3_wwsa2")
 theme_override_font_sizes/font_size = 24
-theme_override_styles/focus = SubResource("StyleBoxEmpty_cayip")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kk3ma")
-theme_override_styles/hover = SubResource("StyleBoxFlat_nrnbx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
 theme_override_styles/normal = SubResource("StyleBoxFlat_iqepy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nrnbx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kk3ma")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cayip")
 text = "start game"
 
 [node name="Options" type="Button" parent="VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
-theme_override_colors/font_hover_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_colors/font_color = Color(0.287449, 0.225672, 0.0582517, 1)
 theme_override_colors/font_focus_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_colors/font_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_fonts/font = ExtResource("3_wwsa2")
 theme_override_font_sizes/font_size = 24
-theme_override_styles/focus = SubResource("StyleBoxEmpty_158mb")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kk3ma")
-theme_override_styles/hover = SubResource("StyleBoxFlat_nrnbx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
 theme_override_styles/normal = SubResource("StyleBoxFlat_iqepy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nrnbx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kk3ma")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_158mb")
 text = "options"
 
 [node name="Credits" type="Button" parent="VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
-theme_override_colors/font_hover_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_colors/font_color = Color(0.287449, 0.225672, 0.0582517, 1)
 theme_override_colors/font_focus_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_colors/font_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_fonts/font = ExtResource("3_wwsa2")
 theme_override_font_sizes/font_size = 24
-theme_override_styles/focus = SubResource("StyleBoxEmpty_wwsa2")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kk3ma")
-theme_override_styles/hover = SubResource("StyleBoxFlat_nrnbx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
 theme_override_styles/normal = SubResource("StyleBoxFlat_iqepy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nrnbx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kk3ma")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wwsa2")
 text = "credits"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]

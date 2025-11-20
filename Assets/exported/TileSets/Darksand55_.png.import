@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdinsii0ek6qk"
-path="res://.godot/imported/DarkSand.png-4f4cf39f18e55599acda7278d351d570.ctex"
+uid="uid://q1p5f3vq305m"
+path="res://.godot/imported/Darksand55_.png-9d969c330c4553a305d6eacd419e27c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/exported/TileSets/DarkSand.png"
-dest_files=["res://.godot/imported/DarkSand.png-4f4cf39f18e55599acda7278d351d570.ctex"]
+source_file="res://Assets/exported/TileSets/Darksand55_.png"
+dest_files=["res://.godot/imported/Darksand55_.png-9d969c330c4553a305d6eacd419e27c5.ctex"]
 
 [params]
 
