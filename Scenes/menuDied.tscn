@@ -1,16 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://dk2kr8a4ef221"]
+[gd_scene load_steps=14 format=3 uid="uid://chk5dnjhijp4r"]
 
-[ext_resource type="Script" uid="uid://d1l6l3f2tuh27" path="res://Scenes/menu.gd" id="1_158mb"]
-[ext_resource type="Texture2D" uid="uid://b6hubite65mb5" path="res://Assets/exported/BackgroundTiles/gamesnip-1.png" id="1_cayip"]
-[ext_resource type="FontFile" uid="uid://c1id6mmgmb2nq" path="res://Assets/exported/Fonts/pixelout/Pixelout Personal Use Only.ttf" id="2_cayip"]
-[ext_resource type="FontFile" uid="uid://dejybtwutbqt0" path="res://Assets/exported/Fonts/pixeled/Pixeled.ttf" id="3_wwsa2"]
+[ext_resource type="Script" uid="uid://bw8cgm7iig6oy" path="res://Scenes/menu_died.gd" id="1_oa0qi"]
+[ext_resource type="Texture2D" uid="uid://b6hubite65mb5" path="res://Assets/exported/BackgroundTiles/gamesnip-1.png" id="2_3sfxl"]
+[ext_resource type="FontFile" uid="uid://c1id6mmgmb2nq" path="res://Assets/exported/Fonts/pixelout/Pixelout Personal Use Only.ttf" id="3_uuvyc"]
+[ext_resource type="FontFile" uid="uid://dejybtwutbqt0" path="res://Assets/exported/Fonts/pixeled/Pixeled.ttf" id="4_dhxi2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l48gv"]
-texture = ExtResource("1_cayip")
+texture = ExtResource("2_3sfxl")
 modulate_color = Color(0.138034, 0.138034, 0.138034, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ecwwl"]
-font = ExtResource("2_cayip")
+font = ExtResource("3_uuvyc")
 font_size = 84
 font_color = Color(0.802935, 0.673695, 0.118647, 1)
 
@@ -58,7 +58,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_158mb")
+script = ExtResource("1_oa0qi")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -71,12 +71,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -375.0
+offset_left = -181.0
 offset_top = 63.0
-offset_right = 375.0
+offset_right = 196.0
 offset_bottom = 147.0
 grow_horizontal = 2
-text = "Egyptian Future"
+text = "You Died"
 label_settings = SubResource("LabelSettings_ecwwl")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -102,14 +102,14 @@ theme_override_colors/font_focus_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_colors/font_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_colors/font_hover_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
-theme_override_fonts/font = ExtResource("3_wwsa2")
+theme_override_fonts/font = ExtResource("4_dhxi2")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_iqepy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
 theme_override_styles/hover = SubResource("StyleBoxFlat_nrnbx")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kk3ma")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_cayip")
-text = "start game"
+text = "Restart"
 
 [node name="Options" type="Button" parent="VBoxContainer"]
 texture_filter = 1
@@ -119,7 +119,7 @@ theme_override_colors/font_focus_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_colors/font_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_colors/font_hover_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
-theme_override_fonts/font = ExtResource("3_wwsa2")
+theme_override_fonts/font = ExtResource("4_dhxi2")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_iqepy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
@@ -136,7 +136,7 @@ theme_override_colors/font_focus_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_colors/font_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_colors/font_hover_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
-theme_override_fonts/font = ExtResource("3_wwsa2")
+theme_override_fonts/font = ExtResource("4_dhxi2")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_iqepy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
@@ -153,16 +153,17 @@ theme_override_colors/font_focus_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_colors/font_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_colors/font_hover_color = Color(0.286275, 0.227451, 0.0588235, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
-theme_override_fonts/font = ExtResource("3_wwsa2")
+theme_override_fonts/font = ExtResource("4_dhxi2")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_iqepy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
 theme_override_styles/hover = SubResource("StyleBoxFlat_nrnbx")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kk3ma")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_wwsa2")
-text = "Quit"
+text = "QUIT"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_credits_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
