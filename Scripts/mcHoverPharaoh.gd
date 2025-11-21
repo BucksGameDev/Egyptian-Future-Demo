@@ -1,10 +1,97 @@
 extends CharacterBody2D
 
+@onready var heart_0: AnimatedSprite2D = %Heart0
+@onready var heart_1: AnimatedSprite2D = %Heart1
+@onready var heart_2: AnimatedSprite2D = %Heart2
+@onready var heart_3: AnimatedSprite2D = %Heart3
+@onready var heart_4: AnimatedSprite2D = %Heart4
+var health
+@onready var texture_rect_1: TextureRect = %TextureRect1
+@onready var texture_rect_2: TextureRect = %TextureRect2
+@onready var texture_rect_3: TextureRect = %TextureRect3
+@onready var texture_rect_4: TextureRect = %TextureRect4
+@onready var texture_rect_5: TextureRect = %TextureRect5
 
-#func _ready() -> void:
+var takingDamage
+
+func _ready() -> void:
+	takingDamage = false
 	#animation_player.play("Sound")
+	#texture_rect_1.custom_minimum_size = Vector2(40, 40)
+	#texture_rect_2.custom_minimum_size = Vector2(40, 40)
+	#texture_rect_3.custom_minimum_size = Vector2(40, 40)
+	#texture_rect_4.custom_minimum_size = Vector2(40, 40)
+	#texture_rect_5.custom_minimum_size = Vector2(40, 40)
+	texture_rect_1.visible = true
+	texture_rect_2.visible = true
+	texture_rect_3.visible = true
+	texture_rect_4.visible = true
+	texture_rect_5.visible = true
+	heart_0.visible = true
+	heart_1.visible = true
+	heart_2.visible = true
+	heart_3.visible = true
+	heart_4.visible = true
+	heart_0.centered = false
+	heart_1.centered = false
+	heart_2.centered = false
+	heart_3.centered = false
+	heart_4.centered = false
+	health = 5.0
+	heart_0.play("Full")
+	heart_1.play("Full")
+	heart_2.play("Full")
+	heart_3.play("Full")
+	heart_4.play("Full")
+
+@onready var timer: Timer = $Timer
+
+func _on_timer_timeout() -> void:
+	takingDamage = false
 	
-	
+func _damage() -> void:
+	if (health <= 1 && takingDamage == false):
+		pass
+		get_tree().reload_current_scene()
+	elif (takingDamage == false):
+		health -= 1
+		takingDamage = true
+		timer.start()
+		if health == 4.5:
+			pass
+		elif health == 4:
+			heart_0.play("Full")
+			heart_1.play("Full")
+			heart_2.play("Full")
+			heart_3.play("Full")
+			heart_4.play("Full-None")
+		elif health == 3.5:
+			pass
+		elif health == 3:
+			heart_0.play("Full")
+			heart_1.play("Full")
+			heart_2.play("Full")
+			heart_3.play("Full-None")
+			heart_4.play("None")
+		elif health == 2.5:
+			pass
+		elif health == 2:
+			heart_0.play("Full")
+			heart_1.play("Full")
+			heart_2.play("Full-None")
+			heart_3.play("None")
+			heart_4.play("None")
+		elif health == 1.5:
+			pass
+		elif health == 1:
+			heart_0.play("Full")
+			heart_1.play("Full-None")
+			heart_2.play("None")
+			heart_3.play("None")
+			heart_4.play("None")
+			
+		
+		
 const SPEED = 200.0
 const JUMP_VELOCITY = -400.0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D

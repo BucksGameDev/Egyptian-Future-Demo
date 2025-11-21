@@ -22,7 +22,7 @@
 [ext_resource type="Script" path="res://Scripts/pickupsHillLevel.gd" id="14_qnnut"]
 [ext_resource type="Script" path="res://Scenes/tile_map.gd" id="14_tuqhi"]
 [ext_resource type="AudioStream" uid="uid://c3t1l5shvsbql" path="res://Assets/exported/Sounds/Desert ambient music [686838].mp3" id="15_2p8v5"]
-[ext_resource type="PackedScene" uid="uid://dloigauh8p8de" path="res://Scenes/coin.tscn" id="16_xr8tk"]
+[ext_resource type="PackedScene" uid="uid://b0wje0td6rlmr" path="res://Scenes/coin.tscn" id="16_xr8tk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("2_5iqsx")
@@ -364,4 +364,5 @@ position = Vector2(371, -967)
 position = Vector2(-396, -807)
 
 [connection signal="body_entered" from="TileMap/Area2D" to="TileMap" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="KillZone" to="EgyptianGuy" method="_on_kill_zone_body_entered"]
 [connection signal="child_exiting_tree" from="Pickups" to="EgyptianGuy/Counter" method="_on_pickups_child_exiting_tree"]
