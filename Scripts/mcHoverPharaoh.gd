@@ -46,6 +46,7 @@ func _ready() -> void:
 
 @onready var timer: Timer = $Timer
 @onready var timer_2: Timer = $Timer2
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _on_timer_timeout() -> void:
 	takingDamage = false
