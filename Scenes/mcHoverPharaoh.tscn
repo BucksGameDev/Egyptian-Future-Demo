@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://behj5mqspcif0"]
+[gd_scene load_steps=19 format=3 uid="uid://behj5mqspcif0"]
 
 [ext_resource type="Script" uid="uid://b58yeghkb5jai" path="res://Scripts/mcHoverPharaoh.gd" id="1_hnpca"]
 [ext_resource type="Texture2D" uid="uid://3425cx0hfgks" path="res://Assets/exported/Sprites/mcIdle.png" id="1_jhksu"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cufhaj5yk0mrv" path="res://Assets/exported/Sprites/istockphoto-2037395446-612x612.jpg" id="4_f5rvx"]
 [ext_resource type="AudioStream" uid="uid://ounad4vhlpvs" path="res://Assets/exported/Sounds/hoverboardsoundTrimmed.mp3" id="6_5b3am"]
 [ext_resource type="AudioStream" uid="uid://wjim5isys5gy" path="res://Assets/exported/Sounds/hoverboardsound_Trim2.mp3" id="7_3fgs7"]
+[ext_resource type="PackedScene" uid="uid://b0v7of6237vhp" path="res://Scenes/heart.tscn" id="8_i357s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kxr6v"]
 atlas = ExtResource("1_jhksu")
@@ -84,6 +85,85 @@ radius = 8.0
 collision_layer = 2
 script = ExtResource("1_hnpca")
 
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+z_index = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -53.0
+offset_right = -34.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+size_flags_stretch_ratio = 0.0
+localize_numeral_system = false
+
+[node name="TextureRect1" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(-25, 0)
+layout_mode = 2
+
+[node name="Heart0" parent="HBoxContainer/TextureRect1" instance=ExtResource("8_i357s")]
+unique_name_in_owner = true
+position = Vector2(-78, -1.0000001)
+scale = Vector2(1, 1)
+centered = false
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(-25, 0)
+layout_mode = 2
+
+[node name="Heart1" parent="HBoxContainer/TextureRect2" instance=ExtResource("8_i357s")]
+unique_name_in_owner = true
+position = Vector2(-52, -1.0000001)
+scale = Vector2(1, 1)
+centered = false
+offset = Vector2(-10, 0)
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(-25, 0)
+layout_mode = 2
+
+[node name="Heart2" parent="HBoxContainer/TextureRect3" instance=ExtResource("8_i357s")]
+unique_name_in_owner = true
+position = Vector2(-26, -1.0000001)
+scale = Vector2(1, 1)
+centered = false
+offset = Vector2(-20, 0)
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(-25, 0)
+layout_mode = 2
+
+[node name="Heart3" parent="HBoxContainer/TextureRect4" instance=ExtResource("8_i357s")]
+unique_name_in_owner = true
+position = Vector2(-25, -1)
+scale = Vector2(1, 1)
+centered = false
+offset = Vector2(-5, 0)
+
+[node name="TextureRect5" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(-25, 0)
+layout_mode = 2
+
+[node name="Heart4" parent="HBoxContainer/TextureRect5" instance=ExtResource("8_i357s")]
+unique_name_in_owner = true
+position = Vector2(-9, -1)
+scale = Vector2(1, 1)
+centered = false
+offset = Vector2(-5, 0)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.75
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ipk5o")
 animation = &"Move"
@@ -142,6 +222,7 @@ stream = ExtResource("6_5b3am")
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_3fgs7")
 
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="ButtonRight" to="." method="_on_button_right_pressed"]
 [connection signal="pressed" from="ButtonLeft" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="ButtonUp" to="." method="_on_button_up_pressed"]

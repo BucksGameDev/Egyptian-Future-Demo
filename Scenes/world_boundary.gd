@@ -1,0 +1,18 @@
+extends Area2D
+
+@onready var timer: Timer = $Timer
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+var player
+
+func _on_body_entered(body: Node2D) -> void:
+	#plays hawk sounds
+	animation_player.play("HawkCry")
+	player = get_tree().current_scene.get_node("EgyptianGuy")
+	player._damage()
+	#timer.start()
+	
+	
+	
+#func _on_timer_timeout() -> void:
+	#reloads level
+	#get_tree().reload_current_scene()

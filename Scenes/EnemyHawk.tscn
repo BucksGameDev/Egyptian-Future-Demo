@@ -1,9 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://dkqybj7hhe0vr"]
+[gd_scene load_steps=16 format=3 uid="uid://dkqybj7hhe0vr"]
 
 [ext_resource type="Script" uid="uid://yhaa1eiwm5fe" path="res://Scripts/enemy_hawk.gd" id="1_r7tam"]
 [ext_resource type="Texture2D" uid="uid://c6k4oo0jqbryx" path="res://Assets/exported/Sprites/hawk.png" id="1_ts2tl"]
-[ext_resource type="PackedScene" uid="uid://qlmnhe27ubn4" path="res://Scenes/2world_boundary.tscn" id="2_ts2tl"]
-[ext_resource type="Script" uid="uid://cb02ux4d4eny1" path="res://Scripts/2_world_boundary.gd" id="4_p17wt"]
+[ext_resource type="Script" uid="uid://db5ohi1a4m4e2" path="res://Scenes/world_boundary.gd" id="3_p17wt"]
 [ext_resource type="AudioStream" uid="uid://di5d26rlyschu" path="res://Assets/exported/Sounds/Hawk⧸Eagle Cry 2.mp3" id="5_le54b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p17wt"]
@@ -104,8 +103,12 @@ scale = Vector2(0.671875, 0.671875)
 sprite_frames = SubResource("SpriteFrames_bk6hr")
 autoplay = "default"
 
-[node name="World Boundary" parent="." instance=ExtResource("2_ts2tl")]
-script = ExtResource("4_p17wt")
+[node name="World Boundary" type="Area2D" parent="."]
+collision_mask = 2
+script = ExtResource("3_p17wt")
+
+[node name="Timer" type="Timer" parent="World Boundary"]
+wait_time = 0.4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World Boundary"]
 shape = SubResource("RectangleShape2D_r7tam")
@@ -123,3 +126,6 @@ target_position = Vector2(17, 0)
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 target_position = Vector2(-17, 0)
+
+[connection signal="body_entered" from="World Boundary" to="World Boundary" method="_on_body_entered"]
+[connection signal="timeout" from="World Boundary/Timer" to="World Boundary" method="_on_timer_timeout"]
