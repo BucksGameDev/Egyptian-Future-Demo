@@ -45,14 +45,23 @@ func _ready() -> void:
 	heart_4.play("Full")
 
 @onready var timer: Timer = $Timer
+@onready var timer_2: Timer = $Timer2
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _on_timer_timeout() -> void:
 	takingDamage = false
 	
+func _on_timer_2_timeout() -> void:
+	get_tree().change_scene_to_file("res://Scenes/menuDied.tscn")
+
 func _damage() -> void:
 	if (health <= 1 && takingDamage == false):
-		pass
-		get_tree().reload_current_scene()
+		heart_0.play("Full-None")
+		heart_1.play("None")
+		heart_2.play("None")
+		heart_3.play("None")
+		heart_4.play("None")
+		timer_2.start()
 	elif (takingDamage == false):
 		health -= 1
 		takingDamage = true
