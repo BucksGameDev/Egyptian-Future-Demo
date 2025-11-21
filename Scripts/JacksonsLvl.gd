@@ -8,7 +8,7 @@ func _count(coins) -> void:
 	count += coins
 	animation_player.play("coin pickup")
 	if (count > 4):
-		label.visible = true
+		get_tree().change_scene_to_file("res://Scenes/menuWin.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	count = 0

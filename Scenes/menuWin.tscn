@@ -1,0 +1,215 @@
+[gd_scene load_steps=18 format=3 uid="uid://dut7swig3betv"]
+
+[ext_resource type="Script" uid="uid://cnubattanqjlm" path="res://Scenes/menu_win.gd" id="1_mrj8a"]
+[ext_resource type="Texture2D" uid="uid://b6hubite65mb5" path="res://Assets/exported/BackgroundTiles/gamesnip-1.png" id="2_kq7qk"]
+[ext_resource type="FontFile" uid="uid://c1id6mmgmb2nq" path="res://Assets/exported/Fonts/pixelout/Pixelout Personal Use Only.ttf" id="3_edhbf"]
+[ext_resource type="FontFile" uid="uid://dejybtwutbqt0" path="res://Assets/exported/Fonts/pixeled/Pixeled.ttf" id="4_0uglx"]
+[ext_resource type="AudioStream" uid="uid://dno0omuma6huf" path="res://Assets/exported/Sounds/270528__littlerobotsoundfactory__jingle_win_00.wav" id="5_mrj8a"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l48gv"]
+texture = ExtResource("2_kq7qk")
+modulate_color = Color(0.138034, 0.138034, 0.138034, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ecwwl"]
+font = ExtResource("3_edhbf")
+font_size = 84
+font_color = Color(0.802935, 0.673695, 0.118647, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqepy"]
+bg_color = Color(0.912808, 0.877211, 0.663741, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cayip"]
+bg_color = Color(0.668082, 0.61835, 0.324803, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nrnbx"]
+bg_color = Color(0.840859, 0.791559, 0.499185, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kk3ma"]
+bg_color = Color(0.645292, 0.596531, 0.30863, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 3
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cayip"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_158mb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wwsa2"]
+
+[sub_resource type="Animation" id="Animation_uuvyc"]
+resource_name = "Death"
+length = 3.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_dhxi2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2djho"]
+_data = {
+&"Death": SubResource("Animation_uuvyc"),
+&"RESET": SubResource("Animation_dhxi2")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mrj8a")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+offset_right = 1151.0
+offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_l48gv")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -181.0
+offset_top = 63.0
+offset_right = 196.0
+offset_bottom = 147.0
+grow_horizontal = 2
+text = "You Won"
+label_settings = SubResource("LabelSettings_ecwwl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -214.0
+offset_top = -69.0
+offset_right = 235.0
+offset_bottom = 173.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 19
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.287449, 0.225672, 0.0582517, 1)
+theme_override_colors/font_focus_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_fonts/font = ExtResource("4_0uglx")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_iqepy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nrnbx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kk3ma")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cayip")
+text = "Restart"
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.287449, 0.225672, 0.0582517, 1)
+theme_override_colors/font_focus_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_fonts/font = ExtResource("4_0uglx")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_iqepy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nrnbx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kk3ma")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_158mb")
+text = "options"
+
+[node name="Credits" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.287449, 0.225672, 0.0582517, 1)
+theme_override_colors/font_focus_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_fonts/font = ExtResource("4_0uglx")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_iqepy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nrnbx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kk3ma")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wwsa2")
+text = "credits"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.287449, 0.225672, 0.0582517, 1)
+theme_override_colors/font_focus_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_fonts/font = ExtResource("4_0uglx")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_iqepy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nrnbx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kk3ma")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wwsa2")
+text = "QUIT"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_mrj8a")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_2djho")
+}
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_credits_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
