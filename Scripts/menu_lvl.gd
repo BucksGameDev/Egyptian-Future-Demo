@@ -14,3 +14,7 @@ func _on_lvl_2_pressed() -> void:
 
 func _on_lvl_3_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Person3-Scene.tscn")
+
+
+func _on_lvl_4_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Person4-Scene.tscn")

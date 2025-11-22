@@ -22,7 +22,7 @@ func _on_timer_timeout() -> void:
 	if not isFalling:
 		player._damage()
 		timer_2.start()
-		player.global_position = Vector2(-170, -260)
+		player.global_position = Vector2(-519, -1121)
 		
 
 	#reloads level

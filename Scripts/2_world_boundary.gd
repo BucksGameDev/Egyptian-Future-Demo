@@ -4,7 +4,7 @@ extends Area2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 var player
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
 	#plays hawk sound
 	animation_player.play("HawkCry")
 	player = get_tree().current_scene.get_node("EgyptianGuy")

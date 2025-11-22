@@ -162,7 +162,26 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kk3ma")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_wwsa2")
 text = "LVL 3"
 
+[node name="LVL 4" type="Button" parent="VBoxContainer2"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.287449, 0.225672, 0.0582517, 1)
+theme_override_colors/font_focus_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.227451, 0.0588235, 1)
+theme_override_fonts/font = ExtResource("4_740sw")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_iqepy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nrnbx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kk3ma")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wwsa2")
+text = "LVL 4
+"
+
 [connection signal="pressed" from="VBoxContainer2/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="VBoxContainer2/LVL 1" to="." method="_on_lvl_1_pressed"]
 [connection signal="pressed" from="VBoxContainer2/LVL 2" to="." method="_on_lvl_2_pressed"]
 [connection signal="pressed" from="VBoxContainer2/LVL 3" to="." method="_on_lvl_3_pressed"]
+[connection signal="pressed" from="VBoxContainer2/LVL 4" to="." method="_on_lvl_4_pressed"]
