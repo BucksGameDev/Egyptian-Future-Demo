@@ -6,7 +6,7 @@ var player
 
 func _on_body_entered(body: Node2D) -> void:
 	#plays hawk sounds
-	animation_player.play("HawkCry")
+ 	animation_player.play("HawkCry")
 	player = get_tree().current_scene.get_node("EgyptianGuy")
 	player._damage()
 	#timer.start()
