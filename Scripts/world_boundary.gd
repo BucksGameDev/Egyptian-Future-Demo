@@ -1,4 +1,5 @@
 extends Area2D
+@onready var timer_2: Timer = $Timer2
 
 @onready var timer: Timer = $Timer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
