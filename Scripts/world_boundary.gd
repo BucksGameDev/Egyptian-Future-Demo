@@ -1,13 +1,18 @@
 extends Area2D
 
 @onready var timer: Timer = $Timer
-@onready var falling_soundtrack: AnimationPlayer = $"Falling Soundtrack"
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+var player
 
 func _on_body_entered(body: Node2D) -> void:
-	falling_soundtrack.play("Falling")
-	timer.start()
+	#plays hawk sounds
+	animation_player.play("HawkCry")
+	player = get_tree().current_scene.get_node("EgyptianGuy")
+	player._damage()
+	#timer.start()
 	
 	
-func _on_timer_timeout() -> void:
-	get_tree().reload_current_scene()
-#get_tree().change_scene_to_file("res://Scenes/game2.tscn")
+	
+#func _on_timer_timeout() -> void:
+	#reloads level
+	#get_tree().reload_current_scene()
