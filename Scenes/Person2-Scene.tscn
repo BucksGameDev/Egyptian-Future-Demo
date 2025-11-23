@@ -1,7 +1,7 @@
 [gd_scene load_steps=52 format=3 uid="uid://7yd81rhqkhuq"]
 
 [ext_resource type="PackedScene" uid="uid://behj5mqspcif0" path="res://Scenes/mcHoverPharaoh.tscn" id="1_l63ea"]
-[ext_resource type="Script" uid="uid://nqvuxcuijos5" path="res://Scenes/counter.gd" id="2_h37wk"]
+[ext_resource type="Script" uid="uid://nqvuxcuijos5" path="res://Scripts/counter.gd" id="2_h37wk"]
 [ext_resource type="Texture2D" uid="uid://cf7dmhnuv83xx" path="res://Assets/exported/TileSets/beachTiles.png" id="2_qxw2e"]
 [ext_resource type="Texture2D" uid="uid://31e4o0ttshew" path="res://Assets/exported/Platforms/platform_bricks.png" id="3_h37wk"]
 [ext_resource type="Texture2D" uid="uid://b4k5wpjnn5p3y" path="res://Assets/exported/TileSets/grassy_sand.png" id="4_ep77b"]
@@ -469,10 +469,11 @@ _data = {
 &"pickup sound": SubResource("Animation_id73a")
 }
 
-[node name="MainGameDemo2" type="Node2D"]
+[node name="MainGameDemo3" type="Node2D"]
 
 [node name="EgyptianGuy" parent="." instance=ExtResource("1_l63ea")]
 position = Vector2(-1, -14)
+collision_layer = 6
 
 [node name="Camera2D" type="Camera2D" parent="EgyptianGuy"]
 position = Vector2(1, 14)

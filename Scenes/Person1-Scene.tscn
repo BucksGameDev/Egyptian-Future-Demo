@@ -361,6 +361,7 @@ _data = {
 
 [node name="EgyptianGuy" parent="." instance=ExtResource("1_iu8f2")]
 position = Vector2(-1, -14)
+collision_layer = 6
 
 [node name="Camera2D" type="Camera2D" parent="EgyptianGuy"]
 position = Vector2(1, 14)
