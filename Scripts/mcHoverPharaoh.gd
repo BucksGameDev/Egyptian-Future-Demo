@@ -149,13 +149,16 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	if velocity.x == 0:
+		animated_sprite_2d.rotation_degrees = 0
 		animated_sprite_2d.play("Idle")
 	if velocity.x < 0:
 		animated_sprite_2d.flip_h = true
 		animated_sprite_2d.play("Move")
+		animated_sprite_2d.rotation_degrees = -3
 	elif velocity.x > 0:
 		animated_sprite_2d.flip_h = false
 		animated_sprite_2d.play("Move")
+		animated_sprite_2d.rotation_degrees = 3
 	move_and_slide()
 
 
