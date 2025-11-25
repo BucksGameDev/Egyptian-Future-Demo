@@ -124,15 +124,11 @@ Peter B
 "
 
 [node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 166.0
+layout_mode = 0
+offset_left = 696.0
 offset_top = 41.0
-offset_right = 489.0
+offset_right = 1019.0
 offset_bottom = 128.0
-grow_horizontal = 2
 theme_override_colors/font_color = Color(0.28627452, 0.22745098, 0.05882353, 1)
 theme_override_colors/font_focus_color = Color(0.28627452, 0.22745098, 0.05882353, 1)
 theme_override_colors/font_pressed_color = Color(0.49555725, 0.40020669, 0.13262707, 1)
