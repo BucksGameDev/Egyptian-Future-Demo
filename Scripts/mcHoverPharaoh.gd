@@ -113,7 +113,7 @@ func _input(event):
 	if event is InputEventKey and event.pressed and not event.echo:
 		if event.keycode == KEY_SPACE:
 			JumpSound.pitch_scale = 1.3
-			JumpSound.volume_db = -10
+			JumpSound.volume_db = 10
 			JumpSound.play()
 
 
@@ -131,14 +131,20 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction != 0 and is_on_floor():
+	
 		# Play the sound if the player is moving (direction != 0) AND the sound is not currently playing
 		if not MoveSounds.playing:
 			# Set the sound parameters for movement
-			MoveSounds.pitch_scale = 0.9
-			MoveSounds.volume_db = -11
+			MoveSounds.pitch_scale = 1.1
+			MoveSounds.volume_db = 10
 			
 			# NOTE: For continuous play, the sound file in your AudioStreamPlayer 
 			# MUST have its "Loop" property enabled in the Inspector!
+			MoveSounds.play()
+	elif (direction == 0 and is_on_floor()):
+		if not MoveSounds.playing:
+			MoveSounds.pitch_scale = 0.9
+			MoveSounds.volume_db = 10
 			MoveSounds.play()
 	else:
 		# Stop the sound if the player stops moving or jumps
