@@ -113,7 +113,7 @@ func _input(event):
 	if event is InputEventKey and event.pressed and not event.echo:
 		if event.keycode == KEY_SPACE:
 			JumpSound.pitch_scale = 1.3
-			JumpSound.volume_db = -15
+			JumpSound.volume_db = -20
 			JumpSound.play()
 
 
