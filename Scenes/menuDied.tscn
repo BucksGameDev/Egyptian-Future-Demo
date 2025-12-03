@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://chk5dnjhijp4r"]
 
-[ext_resource type="Script" uid="uid://bw8cgm7iig6oy" path="res://Scenes/menu_died.gd" id="1_oa0qi"]
+[ext_resource type="Script" uid="uid://bw8cgm7iig6oy" path="res://Scripts/menu_died.gd" id="1_oa0qi"]
 [ext_resource type="Texture2D" uid="uid://b6hubite65mb5" path="res://Assets/exported/BackgroundTiles/gamesnip-1.png" id="2_3sfxl"]
 [ext_resource type="FontFile" uid="uid://c1id6mmgmb2nq" path="res://Assets/exported/Fonts/pixelout/Pixelout Personal Use Only.ttf" id="3_uuvyc"]
 [ext_resource type="FontFile" uid="uid://dejybtwutbqt0" path="res://Assets/exported/Fonts/pixeled/Pixeled.ttf" id="4_dhxi2"]
@@ -100,8 +100,11 @@ script = ExtResource("1_oa0qi")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
-offset_right = 1151.0
-offset_bottom = 647.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_l48gv")
 
 [node name="Label" type="Label" parent="."]

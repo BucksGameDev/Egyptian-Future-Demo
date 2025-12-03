@@ -31,22 +31,35 @@ grow_vertical = 2
 script = ExtResource("1_7xmno")
 
 [node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_right = 1151.0
-offset_bottom = 650.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_k2yj5")
 
-[node name="Credits" type="Label" parent="."]
+[node name="Control" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -509.0
-offset_top = -283.5
-offset_right = -210.0
-offset_bottom = -195.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Credits" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -526.0
+offset_top = -263.0
+offset_right = -227.0
+offset_bottom = -175.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.28627452, 0.22745098, 0.05882353, 1)
@@ -54,17 +67,17 @@ theme_override_fonts/font = ExtResource("1_xbebw")
 theme_override_font_sizes/font_size = 87
 text = "Credits"
 
-[node name="Design" type="Label" parent="."]
+[node name="Design" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -490.0
-offset_top = -86.0
-offset_right = -169.0
-offset_bottom = 241.0
+offset_left = -507.0
+offset_top = -65.5
+offset_right = -186.0
+offset_bottom = 261.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.28627452, 0.22745098, 0.05882353, 1)
@@ -76,17 +89,17 @@ Level 2 - Vince
 Level 3 - Jackson
 "
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -88.0
-offset_top = -94.0
-offset_right = 296.0
-offset_bottom = 198.0
+offset_left = -105.0
+offset_top = -73.5
+offset_right = 279.0
+offset_bottom = 218.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.28627452, 0.22745098, 0.05882353, 1)
@@ -98,17 +111,17 @@ Sand -
 Coin - Patrick
 Grass - "
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label2" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 400.0
-offset_top = -87.0
-offset_right = 527.0
-offset_bottom = 205.0
+offset_left = 383.0
+offset_top = -66.5
+offset_right = 510.0
+offset_bottom = 225.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.28627452, 0.22745098, 0.05882353, 1)
@@ -120,16 +133,19 @@ Vince
 Peter B
 "
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="Control"]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = 166.0
-offset_top = 41.0
-offset_right = 489.0
-offset_bottom = 128.0
+anchor_bottom = 0.5
+offset_left = 116.0
+offset_top = -268.0
+offset_right = 439.0
+offset_bottom = -181.0
 grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0.28627452, 0.22745098, 0.05882353, 1)
 theme_override_colors/font_focus_color = Color(0.28627452, 0.22745098, 0.05882353, 1)
 theme_override_colors/font_pressed_color = Color(0.49555725, 0.40020669, 0.13262707, 1)
@@ -145,4 +161,4 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_5qoai")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jpdlp")
 text = "Back"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

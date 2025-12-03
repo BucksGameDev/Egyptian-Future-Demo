@@ -414,6 +414,7 @@ shape = SubResource("WorldBoundaryShape2D_v158k")
 
 [node name="Falling sound" type="AudioStreamPlayer2D" parent="KillZone"]
 stream = ExtResource("10_71yw8")
+volume_db = -15.0
 
 [node name="Falling Soundtrack" type="AnimationPlayer" parent="KillZone"]
 libraries = {
@@ -479,6 +480,7 @@ label_settings = SubResource("LabelSettings_qkcwk")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_2p8v5")
+volume_db = -15.0
 autoplay = true
 
 [node name="Pickups" type="Node2D" parent="."]
@@ -492,6 +494,7 @@ libraries = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Pickups"]
 stream = ExtResource("14_gk84l")
+volume_db = -15.0
 
 [node name="Coin" parent="Pickups" instance=ExtResource("16_xr8tk")]
 position = Vector2(110, -62)
